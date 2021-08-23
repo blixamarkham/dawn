@@ -488,6 +488,9 @@
             {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
+            {%- comment %}<locksmith:7ca0>{% endcomment -%}
+              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+            {%- comment %}</locksmith:7ca0>{% endcomment -%}
             <li class="grid__item">
               {% render 'product-card', product_card_product: product, media_size: section.settings.image_ratio, show_secondary_image: section.settings.show_secondary_image, add_image_padding: section.settings.add_image_padding, show_vendor: section.settings.show_vendor, show_image_outline: section.settings.show_image_outline %}
             </li>
