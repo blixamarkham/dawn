@@ -2,6 +2,24 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
+      "blocks": {
+        "04abb5fb-68dc-4f5a-94e1-615867e2e476": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome..."
+          }
+        },
+        "cf44919b-a5ca-467f-84f7-7d370397780f": {
+          "type": "text",
+          "settings": {
+            "text": "...to my slice of digital real estate. I hope you enjoy your time here and take away useful advice that you can apply to your business."
+          }
+        }
+      },
+      "block_order": [
+        "04abb5fb-68dc-4f5a-94e1-615867e2e476",
+        "cf44919b-a5ca-467f-84f7-7d370397780f"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/person-using-laptop.jpg",
         "desktop_text_box_position": "flex-end",
