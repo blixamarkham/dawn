@@ -3,7 +3,7 @@
     "id": "v3tkG9",
     "name": "Registration",
     "handle": "registration-3983",
-    "theme_id": null,
+    "theme_id": "126317265054",
     "settings": {
       "locales": {
         "back": "Back",
@@ -40,11 +40,14 @@
       "goBackAfterCancelButtonClick": false
     },
     "install_locations": [
-
+      "register",
+      "account_edit",
+      "page_template"
     ],
     "created_at": "2021-08-25T15:52:47Z",
-    "updated_at": "2021-08-25T16:14:01Z",
+    "updated_at": "2021-08-25T16:15:02Z",
     "revision_ids": [
+      "akTzvk8",
       "6XTxo0R",
       "xMTx2K6",
       "evT98xP",
@@ -53,9 +56,9 @@
     ]
   },
   "revision": {
-    "id": "6XTxo0R",
-    "created_at": "2021-08-25T16:14:01Z",
-    "updated_at": "2021-08-25T16:14:01Z",
+    "id": "akTzvk8",
+    "created_at": "2021-08-25T16:17:28Z",
+    "updated_at": "2021-08-25T16:17:28Z",
     "embed_version": "4.5.9",
     "published_at": null,
     "fields": [
@@ -78,18 +81,19 @@
 
         ],
         "appearance": {
-          "width": 6
+          "width": 6,
+          "cssClass": "field"
         },
         "settings": {
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -121,12 +125,12 @@
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -158,12 +162,12 @@
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Please complete this required field."
+            "errorMessage": "Please complete this required field.",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -195,12 +199,12 @@
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Please complete this required field."
+            "errorMessage": "Please complete this required field.",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -224,40 +228,40 @@
         "description": "",
         "enum": [
           {
-            "label": "E-Commerce & Retail",
-            "value": "E-Commerce & Retail"
+            "value": "E-Commerce & Retail",
+            "label": "E-Commerce & Retail"
           },
           {
-            "label": "Financial Services & Banking",
-            "value": "Financial Services & Banking"
+            "value": "Financial Services & Banking",
+            "label": "Financial Services & Banking"
           },
           {
-            "label": "Real Estate",
-            "value": "Real Estate"
+            "value": "Real Estate",
+            "label": "Real Estate"
           },
           {
-            "label": "Insurance",
-            "value": "Insurance"
+            "value": "Insurance",
+            "label": "Insurance"
           },
           {
-            "label": "Legal Services",
-            "value": "Legal Services"
+            "value": "Legal Services",
+            "label": "Legal Services"
           },
           {
-            "label": "Collections",
-            "value": "Collections"
+            "value": "Collections",
+            "label": "Collections"
           },
           {
-            "label": "Recruiting & HR",
-            "value": "Recruiting & HR"
+            "value": "Recruiting & HR",
+            "label": "Recruiting & HR"
           },
           {
-            "label": "Sales & Marketing",
-            "value": "Sales & Marketing"
+            "value": "Sales & Marketing",
+            "label": "Sales & Marketing"
           },
           {
-            "label": "Other",
-            "value": "Other"
+            "value": "Other",
+            "label": "Other"
           }
         ],
         "appearance": {
@@ -271,12 +275,12 @@
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -348,12 +352,12 @@
             "errorMessage": "Must not be blank"
           },
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -391,12 +395,12 @@
             "errorMessage": "Please provide a valid phone number"
           },
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": null,
@@ -458,12 +462,12 @@
         },
         "validations": [
           {
-            "metadata": {
-              "hiddenInApp": true
-            },
             "operator": "not_blank",
             "comparand": "",
-            "errorMessage": "Must not be blank"
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
           }
         ],
         "sensitive": true,
@@ -608,10 +612,10 @@
       {
         "id": 212001,
         "title": "Submission success",
+        "description": "",
         "metadata": {
           "isSuccessStep": true
-        },
-        "description": ""
+        }
       }
     ],
     "rules": [
