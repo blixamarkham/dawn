@@ -8,7 +8,7 @@
     "1629909502465710ae": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"contact page-width page-width--narrow spaced-section\"><div class=\"col col-sm-1 col-md-2\">\n   <div class=\"grid__item small--one-whole\">{% render \"customer-fields\", form_id: \"v3tkG9\" %}\n<\/div>\n<\/div>\n<\/div>"
+        "custom_liquid": "<div class=\"contact page-width page-width--narrow spaced-section\"><div class=\"col col-sm-2 col-md-4\">\n   <div class=\"grid__item small--one-whole\">{% render \"customer-fields\", form_id: \"v3tkG9\" %}\n<\/div>\n<\/div>\n<\/div>"
       }
     }
   },
