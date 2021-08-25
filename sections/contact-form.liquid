@@ -55,7 +55,7 @@
 	
     <div class="field">
       <input class="field__input" autocomplete="Company Name" type="text" id="ContactForm-companyname" name="contact[{{ 'templates.contact.form.companyname' | t }}]" value="{% if form.companyname %}{{ form.companyname }}{% elsif customer %}{{ customer.companyname }}{% endif %}" placeholder="{{ 'templates.contact.form.companyname' | t }}">
-      <label class="field__label" for="ContactForm-companyname">{{ 'templates.contact.form.companyname' | t }}</label>
+      <label class="field__label" for="ContactForm-companyname">{{ 'templates.contact.form.name' | t }}</label>
     </div>
 	
     <div class="field">
