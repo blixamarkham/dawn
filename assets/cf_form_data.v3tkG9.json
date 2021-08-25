@@ -47,6 +47,7 @@
     "created_at": "2021-08-25T15:52:47Z",
     "updated_at": "2021-08-25T16:15:02Z",
     "revision_ids": [
+      "X1TkMXr",
       "akTzvk8",
       "6XTxo0R",
       "xMTx2K6",
@@ -56,9 +57,9 @@
     ]
   },
   "revision": {
-    "id": "akTzvk8",
-    "created_at": "2021-08-25T16:17:28Z",
-    "updated_at": "2021-08-25T16:17:28Z",
+    "id": "X1TkMXr",
+    "created_at": "2021-08-25T16:18:28Z",
+    "updated_at": "2021-08-25T16:18:28Z",
     "embed_version": "4.5.9",
     "published_at": null,
     "fields": [
@@ -119,7 +120,8 @@
 
         ],
         "appearance": {
-          "width": 6
+          "width": 6,
+          "cssClass": "field"
         },
         "settings": {
         },
@@ -156,7 +158,8 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
         },
@@ -193,7 +196,8 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
         },
@@ -306,7 +310,8 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
         },
