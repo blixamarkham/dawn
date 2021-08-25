@@ -47,9 +47,10 @@
     "created_at": "2021-08-25T15:52:47Z",
     "updated_at": "2021-08-25T16:15:02Z",
     "revision_ids": [
-      "evT98xD",
-      "6XTxo0R",
+      "xMTx2KB",
       "X1TkMXr",
+      "6XTxo0R",
+      "evT98xD",
       "p4TZN4X",
       "orTYEwR",
       "akTzvk8",
@@ -60,11 +61,11 @@
     ]
   },
   "revision": {
-    "id": "evT98xD",
-    "created_at": "2021-08-25T16:22:08Z",
-    "updated_at": "2021-08-25T16:22:08Z",
+    "id": "xMTx2KB",
+    "created_at": "2021-08-25T16:22:55Z",
+    "updated_at": "2021-08-25T16:22:56Z",
     "embed_version": "4.5.9",
-    "published_at": null,
+    "published_at": "2021-08-25T16:22:56Z",
     "fields": [
       {
         "id": 859131,
@@ -92,12 +93,12 @@
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": null,
@@ -130,12 +131,12 @@
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": null,
@@ -168,12 +169,12 @@
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Please complete this required field.",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please complete this required field."
           }
         ],
         "sensitive": null,
@@ -206,12 +207,12 @@
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Please complete this required field.",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please complete this required field."
           }
         ],
         "sensitive": null,
@@ -235,40 +236,40 @@
         "description": "",
         "enum": [
           {
-            "value": "E-Commerce & Retail",
-            "label": "E-Commerce & Retail"
+            "label": "E-Commerce & Retail",
+            "value": "E-Commerce & Retail"
           },
           {
-            "value": "Financial Services & Banking",
-            "label": "Financial Services & Banking"
+            "label": "Financial Services & Banking",
+            "value": "Financial Services & Banking"
           },
           {
-            "value": "Real Estate",
-            "label": "Real Estate"
+            "label": "Real Estate",
+            "value": "Real Estate"
           },
           {
-            "value": "Insurance",
-            "label": "Insurance"
+            "label": "Insurance",
+            "value": "Insurance"
           },
           {
-            "value": "Legal Services",
-            "label": "Legal Services"
+            "label": "Legal Services",
+            "value": "Legal Services"
           },
           {
-            "value": "Collections",
-            "label": "Collections"
+            "label": "Collections",
+            "value": "Collections"
           },
           {
-            "value": "Recruiting & HR",
-            "label": "Recruiting & HR"
+            "label": "Recruiting & HR",
+            "value": "Recruiting & HR"
           },
           {
-            "value": "Sales & Marketing",
-            "label": "Sales & Marketing"
+            "label": "Sales & Marketing",
+            "value": "Sales & Marketing"
           },
           {
-            "value": "Other",
-            "label": "Other"
+            "label": "Other",
+            "value": "Other"
           }
         ],
         "appearance": {
@@ -282,12 +283,12 @@
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": null,
@@ -361,12 +362,12 @@
             "errorMessage": "Must not be blank"
           },
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": null,
@@ -392,7 +393,8 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
           "defaultCountryCode": "US"
@@ -404,12 +406,12 @@
             "errorMessage": "Please provide a valid phone number"
           },
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": null,
@@ -465,18 +467,19 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
         },
         "validations": [
           {
-            "operator": "not_blank",
-            "comparand": "",
-            "errorMessage": "Must not be blank",
             "metadata": {
               "hiddenInApp": true
-            }
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
           }
         ],
         "sensitive": true,
@@ -502,7 +505,8 @@
 
         ],
         "appearance": {
-          "width": 12
+          "width": 12,
+          "cssClass": "field"
         },
         "settings": {
         },
@@ -621,10 +625,10 @@
       {
         "id": 212001,
         "title": "Submission success",
-        "description": "",
         "metadata": {
           "isSuccessStep": true
-        }
+        },
+        "description": ""
       }
     ],
     "rules": [
