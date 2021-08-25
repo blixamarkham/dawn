@@ -161,7 +161,7 @@
     "contact": {
       "form": {
         "name": "Name",
-        "businessname": "Business Name",
+        "companyname": "Company Name",
         "email": "Email",
         "phone": "Phone number",
         "comment": "Comment",
