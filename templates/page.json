@@ -5,15 +5,15 @@
       "settings": {
       }
     },
-    "1629902401bab4d606": {
-      "type": "contact-form",
+    "1629909502465710ae": {
+      "type": "custom-liquid",
       "settings": {
-        "heading": "Contact form"
+        "custom_liquid": "{% render \"customer-fields\", form_id: \"v3tkG9\" %}"
       }
     }
   },
   "order": [
     "main",
-    "1629902401bab4d606"
+    "1629909502465710ae"
   ]
 }
