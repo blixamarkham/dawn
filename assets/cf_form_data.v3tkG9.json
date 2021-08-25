@@ -47,6 +47,7 @@
     "created_at": "2021-08-25T15:52:47Z",
     "updated_at": "2021-08-25T16:15:02Z",
     "revision_ids": [
+      "orTYEwR",
       "X1TkMXr",
       "akTzvk8",
       "6XTxo0R",
@@ -57,9 +58,9 @@
     ]
   },
   "revision": {
-    "id": "X1TkMXr",
-    "created_at": "2021-08-25T16:18:28Z",
-    "updated_at": "2021-08-25T16:18:28Z",
+    "id": "orTYEwR",
+    "created_at": "2021-08-25T16:19:19Z",
+    "updated_at": "2021-08-25T16:19:19Z",
     "embed_version": "4.5.9",
     "published_at": null,
     "fields": [
@@ -82,7 +83,7 @@
 
         ],
         "appearance": {
-          "width": 6,
+          "width": 12,
           "cssClass": "field"
         },
         "settings": {
@@ -120,7 +121,7 @@
 
         ],
         "appearance": {
-          "width": 6,
+          "width": 12,
           "cssClass": "field"
         },
         "settings": {
