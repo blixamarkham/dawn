@@ -103,11 +103,109 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "1629903052877d92d9": {
+      "type": "collection-list",
+      "blocks": {
+        "1629903052877d92d9-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "realtor-closing-gifts"
+          }
+        },
+        "1629903052877d92d9-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "data"
+          }
+        }
+      },
+      "block_order": [
+        "1629903052877d92d9-0",
+        "1629903052877d92d9-1"
+      ],
+      "settings": {
+        "title": "Collections",
+        "image_ratio": "square",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "image_padding": false,
+        "show_view_all": false
+      }
+    },
+    "1629903128a2b69fc6": {
+      "type": "featured-product",
+      "blocks": {
+        "1629903128a2b69fc6-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "1629903128a2b69fc6-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1629903128a2b69fc6-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "1629903128a2b69fc6-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "1629903128a2b69fc6-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "1629903128a2b69fc6-5": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "1629903128a2b69fc6-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "1629903128a2b69fc6-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "1629903128a2b69fc6-0",
+        "1629903128a2b69fc6-1",
+        "1629903128a2b69fc6-2",
+        "1629903128a2b69fc6-3",
+        "1629903128a2b69fc6-4",
+        "1629903128a2b69fc6-5",
+        "1629903128a2b69fc6-6",
+        "1629903128a2b69fc6-7"
+      ],
+      "settings": {
+        "product": "wine-and-cheese-cutting-board-personalized",
+        "secondary_background": true,
+        "enable_video_looping": false
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "multi_column"
+    "multi_column",
+    "1629903052877d92d9",
+    "1629903128a2b69fc6"
   ]
 }
