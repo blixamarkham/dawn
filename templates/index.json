@@ -199,12 +199,6 @@
         "secondary_background": true,
         "enable_video_looping": false
       }
-    },
-    "1629909409803a3665": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% render \"customer-fields\", form_id: \"v3tkG9\" %}"
-      }
     }
   },
   "order": [
@@ -212,7 +206,6 @@
     "rich_text",
     "multi_column",
     "1629903052877d92d9",
-    "1629903128a2b69fc6",
-    "1629909409803a3665"
+    "1629903128a2b69fc6"
   ]
 }
