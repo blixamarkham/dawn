@@ -3,29 +3,27 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "04abb5fb-68dc-4f5a-94e1-615867e2e476": {
-          "type": "heading",
+        "be2709b9-f179-4e97-8874-520ba0a6cb64": {
+          "type": "buttons",
           "settings": {
-            "heading": "Welcome..."
-          }
-        },
-        "cf44919b-a5ca-467f-84f7-7d370397780f": {
-          "type": "text",
-          "settings": {
-            "text": "...to my slice of digital real estate. I hope you enjoy your time here and take away useful advice that you can apply to your business."
+            "button_label_1": "Start Here",
+            "button_link_1": "https:\/\/askblixa.myshopify.com\/account\/register",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "04abb5fb-68dc-4f5a-94e1-615867e2e476",
-        "cf44919b-a5ca-467f-84f7-7d370397780f"
+        "be2709b9-f179-4e97-8874-520ba0a6cb64"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/city-buildings-stretch-into-the-sky.jpg",
-        "desktop_text_box_position": "center",
+        "image": "shopify:\/\/shop_images\/Hero_Cover.jpg",
+        "desktop_text_box_position": "flex-end",
         "color_scheme": "accent-1",
-        "stack_images_on_mobile": false,
-        "adapt_height_first_image": false
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": true
       }
     },
     "rich_text": {
