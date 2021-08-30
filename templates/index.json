@@ -137,14 +137,14 @@
         "163036162544e3e0db-2"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "What I Excel At (Pun Intended)",
         "image_width": "full",
         "image_ratio": "adapt",
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
-        "swipe_on_mobile": false
+        "swipe_on_mobile": true
       }
     }
   },
