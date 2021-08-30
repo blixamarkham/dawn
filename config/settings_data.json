@@ -10,6 +10,9 @@
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
     "favicon": "shopify:\/\/shop_images\/askblixa-favicon-logo.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/askblixa-square-logo.png",
+    "checkout_logo_position": "center",
+    "checkout_body_background_color": "#fff",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
