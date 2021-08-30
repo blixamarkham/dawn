@@ -143,7 +143,7 @@
         "column_alignment": "center",
         "background_style": "primary",
         "button_label": "Let's Talk",
-        "button_link": "",
+        "button_link": "https:\/\/askblixa.com\/account\/register",
         "swipe_on_mobile": true
       }
     }
