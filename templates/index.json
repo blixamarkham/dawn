@@ -3,34 +3,34 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "be2709b9-f179-4e97-8874-520ba0a6cb64": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Start Here",
-            "button_link_1": "https:\/\/askblixa.myshopify.com\/account\/register",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
         "959a4db9-836a-4aac-b7e6-23eee6772e90": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner"
+            "heading": "Powerful Marketing Data"
           }
         },
         "fff71cad-b26d-481d-a553-7346e23a0c63": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "I am a data sleuth, marketer, and consultant for a lucky few companies."
+          }
+        },
+        "be2709b9-f179-4e97-8874-520ba0a6cb64": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Are You Lucky?",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "be2709b9-f179-4e97-8874-520ba0a6cb64",
         "959a4db9-836a-4aac-b7e6-23eee6772e90",
-        "fff71cad-b26d-481d-a553-7346e23a0c63"
+        "fff71cad-b26d-481d-a553-7346e23a0c63",
+        "be2709b9-f179-4e97-8874-520ba0a6cb64"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/banner-home3.jpg",
