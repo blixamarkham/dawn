@@ -127,8 +127,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/businessdata.jpg",
-            "title": "Manipulating Data",
-            "text": "<p>Ok, you got your data sources. Now you need to use it. Welcome to the world of integrations and API's. Connect your data to your cloud-based tools to turn that data into money.<\/p>"
+            "title": "Implementing Data Solutions",
+            "text": "<p>Ok, you got your data sources and your marketing funnel. Now you need to use it. Welcome to the world of integrations and API's. Connect your data to your cloud-based tools to turn that data into money.<\/p>"
           }
         }
       },
