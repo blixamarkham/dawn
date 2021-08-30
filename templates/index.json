@@ -142,7 +142,7 @@
         "image_ratio": "adapt",
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "Let's Talk",
         "button_link": "",
         "swipe_on_mobile": true
       }
