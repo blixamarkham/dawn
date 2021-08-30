@@ -126,8 +126,9 @@
         "163036162544e3e0db-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/businessdata.jpg",
+            "title": "Manipulating Data",
+            "text": "<p>Ok, you got your data sources. Now you need to use it. Welcome to the world of integrations and API's. Microsoft, Google, Adobe, Amazon, I'm familiar with all of them. And if it's something I don't know, I always am able to learn it quickly.<\/p>"
           }
         }
       },
