@@ -20,6 +20,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Welcome to my home",
               "color_scheme": "accent-1",
