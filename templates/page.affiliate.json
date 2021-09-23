@@ -1,19 +1,77 @@
 {
   "sections": {
+    "1632431409e1e02afa": {
+      "type": "image-banner",
+      "blocks": {
+        "1632431409e1e02afa-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Affiliates"
+          }
+        },
+        "1632431409e1e02afa-1": {
+          "type": "text",
+          "settings": {
+            "text": "Here is a list of businesses I PERSONALLY recommend that you take some time to see what they have to offer."
+          }
+        }
+      },
+      "block_order": [
+        "1632431409e1e02afa-0",
+        "1632431409e1e02afa-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/cool-pool-pineapple.jpg",
+        "desktop_text_box_position": "flex-end",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
       }
     },
-    "1629909502465710ae": {
-      "type": "custom-liquid",
+    "1632431402aff9f387": {
+      "type": "image-with-text",
+      "blocks": {
+        "1632431402aff9f387-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Driven Leadership"
+          }
+        },
+        "1632431402aff9f387-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Leadership development for high performers. Corporate training programs designed to inspire greatness in your team.<\/p>"
+          }
+        },
+        "1632431402aff9f387-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https:\/\/drivenleadership.com\/leadership-trainings\/"
+          }
+        }
+      },
+      "block_order": [
+        "1632431402aff9f387-0",
+        "1632431402aff9f387-1",
+        "1632431402aff9f387-2"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"contact page-width page-width--narrow spaced-section\">{% render \"customer-fields\", form_id: \"v3tkG9\" %}\n<\/div>"
+        "image": "shopify:\/\/shop_images\/McGraths-e1475443991993.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
       }
     }
   },
   "order": [
+    "1632431409e1e02afa",
     "main",
-    "1629909502465710ae"
+    "1632431402aff9f387"
   ]
 }
