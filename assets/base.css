@@ -2198,3 +2198,6 @@ details-disclosure > details {
   .easycsv_branding {
     	visibility: hidden;
 }
+  .easycsv_import_info {
+    	visibility: hidden;
+  }
