@@ -2196,8 +2196,8 @@ details-disclosure > details {
   white labeling
 */
   .easycsv_branding {
-    	visibility: hidden;
+    	display: none;
 }
   .easycsv_import_info {
-    	visibility: hidden;
+    	display: none;
   }
