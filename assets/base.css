@@ -2189,3 +2189,12 @@ details-disclosure > details {
   color: rgb(var(--color-foreground));
   word-break: break-word;
 }
+
+  
+/* easy-csv */
+/*
+  white labeling
+*/
+  .easycsv_branding {
+    	visibility: hidden;
+}
