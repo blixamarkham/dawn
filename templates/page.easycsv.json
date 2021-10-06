@@ -1,10 +1,5 @@
 {
   "sections": {
-    "easycsv": {
-      "type": "easycsv",
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -12,7 +7,6 @@
     }
   },
   "order": [
-    "main",
-    "easycsv"
+    "main"
   ]
 }
