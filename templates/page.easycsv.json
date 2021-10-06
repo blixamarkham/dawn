@@ -4,9 +4,16 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "16335502214c5b9af0": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https:\/\/www.easycsv.io\/embed\/import_form.js?sheet_token=53201f1b-5cc0-4861-bbd6-ac73ed89688e&importer_email={{ customer.email }}\" id=\"easycsv_script\"><\/script>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16335502214c5b9af0"
   ]
 }
