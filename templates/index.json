@@ -33,11 +33,11 @@
         "be2709b9-f179-4e97-8874-520ba0a6cb64"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner-home3.jpg",
+        "image": "shopify:\/\/shop_images\/AskBlixa_My_Story_Hero_Image.jpg",
         "desktop_text_box_position": "flex-end",
         "color_scheme": "accent-1",
-        "stack_images_on_mobile": false,
-        "adapt_height_first_image": false
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": true
       }
     },
     "rich_text": {
