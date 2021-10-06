@@ -10,27 +10,6 @@
       "settings": {
       }
     },
-    "16335609642d03d518": {
-      "type": "image-banner",
-      "blocks": {
-        "16335609642d03d518-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "My Story"
-          }
-        }
-      },
-      "block_order": [
-        "16335609642d03d518-0"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/AskBlixa_My_Story_Hero_Image.jpg",
-        "desktop_text_box_position": "center",
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "adapt_height_first_image": true
-      }
-    },
     "1633561029683dd663": {
       "type": "image-with-text",
       "blocks": {
@@ -142,7 +121,6 @@
   "order": [
     "shogun-helper",
     "main",
-    "16335609642d03d518",
     "1633561029683dd663",
     "1633561187ab7c67e6",
     "1633561425a4f90f98",
