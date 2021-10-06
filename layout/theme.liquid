@@ -124,17 +124,10 @@
     {% section 'header' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {% if template contains 'wholesale' %}
-		{% if customer %}
-			{% if customer.tags contains 'wholesale' %}
-				{{ content_for_layout }}
+      {% if template contains 'easycsv' %}
+		{{ content_for_layout }}
 			{% else %}
-				{% include 'wholesale-note' %}
-			{% endif %}
-		{% else %}
-			{% include 'wholesale-note' %}
-		{% endif %}
-		{% else%}
+				{% include 'easycsv-note' %}
 			{{ content_for_layout }}
 	  {% endif %}
     </main>
