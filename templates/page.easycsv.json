@@ -1,7 +1,7 @@
 {
   "sections": {
     "shogun-helper": {
-      "type": "shogun-helper",
+      "type": "easycsv",
       "settings": {
       }
     },
