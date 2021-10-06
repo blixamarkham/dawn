@@ -1,1 +1,5 @@
-{%- assign main_menu = linklists.remine-tool-menu-handle -%}
+<ul>
+{% for link in linklists.remine-tool.links %}
+  <li><a href= "{{ link.url }}">{{ link.title }}</a></li>
+{% endfor %}
+</ul>
