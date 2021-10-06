@@ -75,35 +75,6 @@
         "full_width": false
       }
     },
-    "1629903052877d92d9": {
-      "type": "collection-list",
-      "blocks": {
-        "1629903052877d92d9-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "realtor-closing-gifts"
-          }
-        },
-        "1629903052877d92d9-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "data"
-          }
-        }
-      },
-      "block_order": [
-        "1629903052877d92d9-0",
-        "1629903052877d92d9-1"
-      ],
-      "settings": {
-        "title": "Collections",
-        "image_ratio": "square",
-        "color_scheme": "inverse",
-        "swipe_on_mobile": true,
-        "image_padding": false,
-        "show_view_all": true
-      }
-    },
     "163036162544e3e0db": {
       "type": "multicolumn",
       "blocks": {
@@ -152,7 +123,6 @@
   "order": [
     "image_banner",
     "rich_text",
-    "1629903052877d92d9",
     "163036162544e3e0db"
   ]
 }
