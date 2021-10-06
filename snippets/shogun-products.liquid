@@ -8,6 +8,9 @@ This file can be re-written at any time.
   <script type="text/javascript">
     window.__shgProducts = window.__shgProducts || {};
     {% for handle in handles %}
+      {%- comment %}<locksmith:e2a8>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: handle, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+      {%- comment %}</locksmith:e2a8>{% endcomment -%}
       {% assign currentProduct = all_products[handle] %}
       {% if currentProduct != blank %}
         window.__shgProducts["{{handle}}"] = {{currentProduct | json }};
