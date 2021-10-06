@@ -1,6 +1,6 @@
 {
   "sections": {
-    "shogun-helper": {
+    "easycsv": {
       "type": "easycsv",
       "settings": {
       }
@@ -12,7 +12,7 @@
     }
   },
   "order": [
-    "shogun-helper",
-    "main"
+    "main",
+    "easycsv"
   ]
 }
