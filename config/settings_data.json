@@ -47,6 +47,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "cf04dc55-88c0-4a1c-8fa6-ae9c80759116": {
+            "type": "text",
+            "settings": {
+              "heading": "AskBlixa LLC",
+              "subtext": "<p>My life's mission is to find out your pain points with technology and solve them. There's no such thing as a dumb question. If you have one, please register and contact me. I will be waiting to here from you.<\/p>"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
@@ -56,6 +63,7 @@
           }
         },
         "block_order": [
+          "cf04dc55-88c0-4a1c-8fa6-ae9c80759116",
           "footer-0"
         ],
         "settings": {
