@@ -10,9 +10,15 @@
       "settings": {
         "custom_liquid": "<div class=\"contact page-width page-width--narrow spaced-section\">{% render \"customer-fields\", form_id: \"v3tkG9\" %}\n<\/div>"
       }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {
+      }
     }
   },
   "order": [
+    "shogun-helper",
     "main",
     "1629909502465710ae"
   ]
