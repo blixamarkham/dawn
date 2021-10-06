@@ -10,6 +10,9 @@
 
     <div class="blog-articles">
       {%- for article in blog.articles -%}
+        {%- comment %}<locksmith:464a>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: article, subject_parent: blog, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:464a>{% endcomment -%}
         <div class="blog-articles__article article">
           {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
         </div>

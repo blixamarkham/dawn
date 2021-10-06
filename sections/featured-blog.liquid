@@ -34,6 +34,9 @@
           role="list"
         >
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+            {%- comment %}<locksmith:38b0>{% endcomment -%}
+              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: article, subject_parent: section.settings.blog, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+            {%- comment %}</locksmith:38b0>{% endcomment -%}
             <li class="blog__post grid__item article slider__slide slider__slide--full-width">
               {% render 'article-card', blog: section.settings.blog, article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author %}
             </li>
