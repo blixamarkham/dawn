@@ -60,11 +60,20 @@
               "heading": "Quick links",
               "menu": "footer"
             }
+          },
+          "d9e9f1e8-2bb1-4b77-a506-7423269cb39d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Hero_Cover_5b586592-dfdf-4fb1-b731-c95ece1bbaaa.jpg",
+              "image_width": 200,
+              "alignment": "center"
+            }
           }
         },
         "block_order": [
           "cf04dc55-88c0-4a1c-8fa6-ae9c80759116",
-          "footer-0"
+          "footer-0",
+          "d9e9f1e8-2bb1-4b77-a506-7423269cb39d"
         ],
         "settings": {
           "color_scheme": "accent-1",
