@@ -73,6 +73,73 @@
         "enable_video_looping": false
       }
     },
+    "1633647729b428af4a": {
+      "type": "rich-text",
+      "blocks": {
+        "1633647729b428af4a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "GUARANTEED ORIGINAL DATA",
+            "heading_size": "h2"
+          }
+        },
+        "1633647729b428af4a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This data is straight from the source. It's accuracy is 100% to the original source. No extra database information that may be incorrect added like other companies do.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1633647729b428af4a-0",
+        "1633647729b428af4a-1"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "full_width": true
+      }
+    },
+    "1633647733478ab934": {
+      "type": "multicolumn",
+      "blocks": {
+        "1633647733478ab934-0": {
+          "type": "column",
+          "settings": {
+            "title": "100% Original Source Data",
+            "text": "<p>This data is straight from the source. It's accuracy is 100% to the original source. No extra database information that may be incorrect added like other companies do.<\/p>"
+          }
+        },
+        "1633647733478ab934-1": {
+          "type": "column",
+          "settings": {
+            "title": "Instant Download",
+            "text": "<p>Get an email list in minutes and download it instantly as an Excel file for in depth analysis or a CSV file for easy uploading! The CSV file type can be integrated into your CRM application quickly and easily so you can get started with making new connections right away.<\/p>"
+          }
+        },
+        "1633647733478ab934-2": {
+          "type": "column",
+          "settings": {
+            "title": "Unlimited Usage Rights",
+            "text": "<p>Once you order the list, you own it! Our pricing is transparent; we don't charge extra fees for using the contacts we give you. There are no hidden fees or contracts. We charge the same low price regardless of if you're a small start-up or a large enterprise!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1633647733478ab934-0",
+        "1633647733478ab934-1",
+        "1633647733478ab934-2"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -87,6 +154,8 @@
   },
   "order": [
     "main",
+    "1633647729b428af4a",
+    "1633647733478ab934",
     "product-recommendations"
   ]
 }
