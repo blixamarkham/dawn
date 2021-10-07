@@ -2,6 +2,34 @@
   "sections": {
     "main": {
       "type": "main-page-faq",
+      "blocks": {
+        "3bbb4cd9-da4e-484c-9303-f2b000e07bd9": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "95339472-c43c-41f9-9d6d-ac4df90a0987": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        },
+        "86956a9e-68b7-4546-99f3-852067054c97": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3bbb4cd9-da4e-484c-9303-f2b000e07bd9",
+        "95339472-c43c-41f9-9d6d-ac4df90a0987",
+        "86956a9e-68b7-4546-99f3-852067054c97"
+      ],
       "settings": {
       }
     }
