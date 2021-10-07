@@ -124,7 +124,7 @@
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
       
 
-{{ 'sectionhub.scss.css' | asset_url | stylesheet_tag }}</head>
+</head>
 
   <body>
 {% capture SectionsPro %}{%section "sections-pro"%}{% endcapture %}{%include "sections_pro_functions" sectionsPro:SectionsPro %}
@@ -169,5 +169,5 @@
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
       }
     </script>
-  <script src="{{ 'sectionhub.js' | asset_url }}" defer></script></body>
+  </body>
 </html>
