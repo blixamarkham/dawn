@@ -121,6 +121,7 @@
         "1633647733478ab934-2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/copyright.png",
             "title": "Unlimited Usage Rights",
             "text": "<p>Once you order the list, you own it! Our pricing is transparent; we don't charge extra fees for using the contacts we give you. There are no hidden fees or contracts. We charge the same low price regardless of if you're a small start-up or a large enterprise!<\/p>"
           }
