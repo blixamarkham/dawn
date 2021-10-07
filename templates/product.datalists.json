@@ -105,6 +105,7 @@
         "1633647733478ab934-0": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/checkbox_9dfe2257-7b33-485f-a8cc-4a9a3d17e8e8.jpg",
             "title": "100% Original Source Data",
             "text": "<p>This data is straight from the source. It's accuracy is 100% to the original source. No extra database information that may be incorrect added like other companies do.<\/p>"
           }
@@ -131,13 +132,39 @@
       ],
       "settings": {
         "title": "",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "primary",
+        "image_width": "third",
+        "image_ratio": "square",
+        "column_alignment": "left",
+        "background_style": "none",
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false
+      }
+    },
+    "16336493801104bb5a": {
+      "type": "rich-text",
+      "blocks": {
+        "16336493801104bb5a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Price Guarantee",
+            "heading_size": "h2"
+          }
+        },
+        "16336493801104bb5a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We guarantee there is absolutely no other supplier that can provide better data with better pricing. If you do find one, bring us the suppliers name and we will beat their price!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16336493801104bb5a-0",
+        "16336493801104bb5a-1"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "full_width": true
       }
     },
     "product-recommendations": {
@@ -156,6 +183,7 @@
     "main",
     "1633647729b428af4a",
     "1633647733478ab934",
+    "16336493801104bb5a",
     "product-recommendations"
   ]
 }
