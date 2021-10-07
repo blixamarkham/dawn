@@ -127,7 +127,6 @@
 </head>
 
   <body>
-{% capture SectionsPro %}{%section "sections-pro"%}{% endcapture %}{%include "sections_pro_functions" sectionsPro:SectionsPro %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -136,9 +135,7 @@
     {% section 'header' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-		{%include "sections_pro_header"%}
 {{ content_for_layout }}
-{%include "sections_pro_footer"%}
     </main>
 
     {% section 'footer' %}
