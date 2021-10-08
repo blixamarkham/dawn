@@ -13,7 +13,7 @@
         {%- when 'text' -%}
 <div class="faq-container">
 <div class="tabs">    
-    <input type="checkbox" id="faq_checkbox_{{ forloop.index }}" class="faq-checkbox"><label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ section.settings.question }}</label> {{ block.settings.Question }}
+    <input type="checkbox" id="faq_checkbox_{{ forloop.index }}" class="faq-checkbox"><label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ section.settings.question }}</label> <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.Question }}</div>
         {%- when 'text' -%}
     <div class="tab-content">{{ block.settings.answer | escape }}</div>
     
