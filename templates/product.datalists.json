@@ -169,13 +169,6 @@
         "full_width": true
       }
     },
-    "163365658535c97066": {
-      "type": "main-page-faq",
-      "settings": {
-        "question": "Do you have a question?",
-        "answer": "<p>I have an answer<\/p>"
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -186,6 +179,13 @@
         "show_image_outline": true,
         "show_vendor": false
       }
+    },
+    "16336568655ddc0d6e": {
+      "type": "main-page-faq",
+      "settings": {
+        "question": "Do you have a question?",
+        "answer": "<p>I have an answer<\/p>"
+      }
     }
   },
   "order": [
@@ -193,7 +193,7 @@
     "1633647729b428af4a",
     "1633647733478ab934",
     "16336493801104bb5a",
-    "163365658535c97066",
-    "product-recommendations"
+    "product-recommendations",
+    "16336568655ddc0d6e"
   ]
 }
