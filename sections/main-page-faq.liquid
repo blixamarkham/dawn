@@ -7,16 +7,12 @@
 
 <div class="page-width page-width--narrow">
   <div class="faq-container">
-    <div class="tabs">
-    	{% for block in section.blocks %}
-      		{% assign item = block.settings %}
-      		
+    <div class="tabs">      		
       		<div class="tab">
       			<input type="checkbox" id="faq_checkbox_{{ forloop.index }}" class="faq-checkbox">
         		<label for="faq_checkbox_{{ forloop.index }}" class="tab-label button button--primary">{{ section.settings.question }}</label>
         		<div class="tab-content">{{ section.settings.answer }}</div>
       		</div>
-      	{% endfor %}
     </div>
   </div>
 </div>
