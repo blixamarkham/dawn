@@ -3,34 +3,140 @@
     "main": {
       "type": "main-page-faq",
       "blocks": {
-        "3bbb4cd9-da4e-484c-9303-f2b000e07bd9": {
-          "type": "faq",
+        "ccb923b9-616b-48db-8970-8ff61b74ab56": {
+          "type": "heading",
           "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h0"
           }
         },
-        "95339472-c43c-41f9-9d6d-ac4df90a0987": {
-          "type": "faq",
+        "3a03495f-4e7b-427c-bb37-e58498860650": {
+          "type": "text",
           "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
+            "Question": "I have a question.",
+            "answer": "I have an answer."
           }
         },
-        "86956a9e-68b7-4546-99f3-852067054c97": {
-          "type": "faq",
+        "eb1f43e3-4734-457a-ba29-77a181e1ab22": {
+          "type": "text",
           "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "50faa2fd-9976-45cc-93be-757ac28ee6fa": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "fe4543d9-2230-4b0e-ac9c-4f06c7355eba": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "23277fc2-eb4a-47e5-8d12-5e0f0d6e7304": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "6124f5da-194c-4361-b603-ee4665eb7583": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "6abf4414-1232-468f-82b5-7681cd8ef738": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "5176f334-26c5-4171-9925-87d7e289612b": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "cd12f5cc-f7ac-4a01-b476-d0b12da4605a": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "b5aa689a-eb17-458f-b5db-1e4d18e83e52": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "37a47b32-cc86-4e13-a0c9-a9ba8e0bdc53": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "d1f12b2d-ab82-4a34-8312-de459620baf3": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "1c3be772-bc37-4269-bab2-0bec519c147e": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "1cd3f4a3-b8df-4f33-8fec-b23e20820c98": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
+          }
+        },
+        "3535d29a-ca4e-4351-a7e0-e6252e2b9d39": {
+          "type": "text",
+          "settings": {
+            "Question": "I have a question.",
+            "answer": "I have an answer."
           }
         }
       },
       "block_order": [
-        "3bbb4cd9-da4e-484c-9303-f2b000e07bd9",
-        "95339472-c43c-41f9-9d6d-ac4df90a0987",
-        "86956a9e-68b7-4546-99f3-852067054c97"
+        "ccb923b9-616b-48db-8970-8ff61b74ab56",
+        "3a03495f-4e7b-427c-bb37-e58498860650",
+        "eb1f43e3-4734-457a-ba29-77a181e1ab22",
+        "50faa2fd-9976-45cc-93be-757ac28ee6fa",
+        "fe4543d9-2230-4b0e-ac9c-4f06c7355eba",
+        "23277fc2-eb4a-47e5-8d12-5e0f0d6e7304",
+        "6124f5da-194c-4361-b603-ee4665eb7583",
+        "6abf4414-1232-468f-82b5-7681cd8ef738",
+        "5176f334-26c5-4171-9925-87d7e289612b",
+        "cd12f5cc-f7ac-4a01-b476-d0b12da4605a",
+        "b5aa689a-eb17-458f-b5db-1e4d18e83e52",
+        "37a47b32-cc86-4e13-a0c9-a9ba8e0bdc53",
+        "d1f12b2d-ab82-4a34-8312-de459620baf3",
+        "1c3be772-bc37-4269-bab2-0bec519c147e",
+        "1cd3f4a3-b8df-4f33-8fec-b23e20820c98",
+        "3535d29a-ca4e-4351-a7e0-e6252e2b9d39"
       ],
       "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
       }
     }
   },
