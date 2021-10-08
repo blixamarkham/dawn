@@ -30,13 +30,7 @@
 
 {% schema %}
 {
-  "name": "FAQ Page",
-  "tag": "section",
-  "class": "spaced-section",
-	"blocks": [
-		{
 			"name": "FAQ Item",
-			"type": "faq",
 			"settings": [
 				{
 					"type": "text",
@@ -50,8 +44,14 @@
 					"label": "Answer",
 					"default": "<p>I have an answer</p>"
 				}
+			],
+			"presets": [
+				{
+					"name": "faq-section",
+					"category": "Custom"
+				}
 			]
-		}
-	]
+		
+	
 }
 {% endschema %}
