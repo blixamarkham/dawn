@@ -204,7 +204,7 @@
           "type": "text",
           "settings": {
             "Question": "Do customers download files as Excel files?",
-            "answer": "I have an answer.g"
+            "answer": "We offer Excel files, .csv files or .txt files."
           }
         }
       },
