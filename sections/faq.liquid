@@ -1,8 +1,29 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "FAQ Page",
+  "tag": "section",
+  "class": "spaced-section",
+	"blocks": [
+		{
+			"name": "FAQ Item",
+			"type": "faq",
+			"settings": [
+				{
+					"type": "text",
+					"id": "question",
+					"label": "Question",
+					"default": "Do you have a question?"
+				},
+				{
+					"type": "richtext",
+					"id": "answer",
+					"label": "Answer",
+					"default": "<p>I have an answer</p>"
+				}
+			]
+		}
+	]
+}
 {% endschema %}
 
 {% stylesheet %}
