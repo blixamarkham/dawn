@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'faq-style.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
@@ -136,7 +137,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.rich-text.presets.name",
+      "name": "faq-section",
       "blocks": [
         {
           "type": "heading"
@@ -145,7 +146,7 @@
           "type": "text"
         },
         {
-          "type": "button"
+          "type": "text"
         }
       ]
     }
