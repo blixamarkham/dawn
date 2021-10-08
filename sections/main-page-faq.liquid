@@ -13,9 +13,9 @@
         {%- when 'text' -%}
 <div class="faq-container">
 <div class="tabs">    
-    <input type="checkbox" class="faq-checkbox"><div class="tab-label button button--primary"> {{ block.settings.Question }}</div>
-        {%- when 'text' -%}
-    <div class="tab-content">{{ block.settings.answer | escape }}</div>
+    <input type="checkbox" class="faq-checkbox"><div class="tab-label button button--primary"> <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.Question }}</div></div>
+     <div class="tab-content">   {%- when 'text' -%}
+    {{ block.settings.answer | escape }}</div>
     
 </div>
     </div>
