@@ -12,8 +12,8 @@
           <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'text' -%}
           <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.Question }}</div>
-        {%- when 'answer_text' -%}
-			{{ block.settings.answer | escape }}
+        {%- when 'Question.answer' -%}
+			{{ block.settings.question.answer | escape }}
       {%- endcase -%}
     {%- endfor -%}
   </div>
