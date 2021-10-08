@@ -183,14 +183,14 @@
           "type": "text",
           "settings": {
             "Question": "When were your data lists last updated?",
-            "answer": "I have an answer."
+            "answer": "Our data is verified monthly. We run scheduled pulls on a monthly basis to ensure that the data you get is as up to date as possible."
           }
         },
         "e4403d94-8c16-408c-8033-efbba8284a4f": {
           "type": "text",
           "settings": {
             "Question": "I want to place an order, but I have doubts about the accuracy of the data. Why should I trust you?",
-            "answer": "I have an answer."
+            "answer": "All of the records we sell are from the original source. If you encounter a low accuracy rate, you can contact us and we will provide you new data for free to make up the difference. We call it our Bounce-Back Guarantee."
           }
         },
         "bb00c2b8-01eb-479e-ab69-6ed288dcacfb": {
