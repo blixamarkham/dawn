@@ -179,6 +179,12 @@
         "show_image_outline": true,
         "show_vendor": false
       }
+    },
+    "1633651874e19a4503": {
+      "type": "page",
+      "settings": {
+        "page": "faqs"
+      }
     }
   },
   "order": [
@@ -186,6 +192,7 @@
     "1633647729b428af4a",
     "1633647733478ab934",
     "16336493801104bb5a",
-    "product-recommendations"
+    "product-recommendations",
+    "1633651874e19a4503"
   ]
 }
