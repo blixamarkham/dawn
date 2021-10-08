@@ -182,62 +182,38 @@
         "2df50024-c4c9-4fb8-bd5e-9a7c9a9d67fd": {
           "type": "text",
           "settings": {
-            "Question": "When were your data lists last updated?"
-          }
-        },
-        "b2373568-e5ff-49d8-a6c1-b796e5c63785": {
-          "type": "answer_text",
-          "settings": {
-            "answer": "Our data is verified weekly. We have developed a complex algorithm for this purpose. With this algorithm, we check the accuracy levels of our data against millions of sources and apply necessary updates."
+            "Question": "When were your data lists last updated?",
+            "answer": "I have an answer."
           }
         },
         "e4403d94-8c16-408c-8033-efbba8284a4f": {
           "type": "text",
           "settings": {
-            "Question": "I want to place an order, but I have doubts about the accuracy of the data. Why should I trust you?"
-          }
-        },
-        "0111034b-d8a0-4003-abd1-31e36118d380": {
-          "type": "answer_text",
-          "settings": {
-            "answer": "All of the records we sell have a 95% accuracy guarantee. If you encounter a lower accuracy rate, you can contact our customer relations staff and we will provide you new data for free to make up the difference. We call it our Bounce-Back Guarantee."
+            "Question": "I want to place an order, but I have doubts about the accuracy of the data. Why should I trust you?",
+            "answer": "I have an answer."
           }
         },
         "bb00c2b8-01eb-479e-ab69-6ed288dcacfb": {
           "type": "text",
           "settings": {
-            "Question": "How long does it take to get my email list after I order online?"
-          }
-        },
-        "4ff9b934-a024-4df1-b5bb-c640e3c705d7": {
-          "type": "answer_text",
-          "settings": {
-            "answer": "You can instantly download your database after your order is confirmed."
+            "Question": "How long does it take to get my email list after I order online?",
+            "answer": "I have an answer."
           }
         },
         "276e29e3-993a-497e-a914-3c8294840f21": {
           "type": "text",
           "settings": {
-            "Question": "Do customers download files as Excel files?"
-          }
-        },
-        "346b1ea6-1b40-43d0-b288-88e229f4c47f": {
-          "type": "answer_text",
-          "settings": {
-            "answer": "We offer Excel files, .csv files or .txt files."
+            "Question": "Do customers download files as Excel files?",
+            "answer": "I have an answer.g"
           }
         }
       },
       "block_order": [
         "fd283683-173a-41c7-92ce-6795ae5c84f2",
         "2df50024-c4c9-4fb8-bd5e-9a7c9a9d67fd",
-        "b2373568-e5ff-49d8-a6c1-b796e5c63785",
         "e4403d94-8c16-408c-8033-efbba8284a4f",
-        "0111034b-d8a0-4003-abd1-31e36118d380",
         "bb00c2b8-01eb-479e-ab69-6ed288dcacfb",
-        "4ff9b934-a024-4df1-b5bb-c640e3c705d7",
-        "276e29e3-993a-497e-a914-3c8294840f21",
-        "346b1ea6-1b40-43d0-b288-88e229f4c47f"
+        "276e29e3-993a-497e-a914-3c8294840f21"
       ],
       "settings": {
         "color_scheme": "background-1",
