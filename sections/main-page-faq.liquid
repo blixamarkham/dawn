@@ -6,6 +6,7 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="page-width page-width--narrow">
+  <h2 class="{{ settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
   <div class="faq-container">
     <div class="tabs">      		
       		<div class="tab">
@@ -37,11 +38,31 @@
 					"default": "Do you have a question?"
 				},
 				{
-					"type": "richtext",
+					"type": "text",
 					"id": "answer",
 					"label": "Answer",
 					"default": "<p>I have an answer</p>"
-				}
+				},
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading_size.label"
+        }
 			],
 			"presets": [
 				{
