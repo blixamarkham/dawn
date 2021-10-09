@@ -1,12 +1,104 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Process 1",
+    "settings": [	  	       
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Our process"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Image size",
+         "default": "600x600_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "text",
+        "id": "button_string",
+        "label": "Button text",
+        "default": "Get more info"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+      {
+      "type": "checkbox",
+      "id": "inverted",
+      "label": "Inverted",
+      "default": false
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "left_text",
+        "options": [
+          {
+            "label": "Left text",
+            "value": "left_text"
+          },
+          {
+            "label": "Right text",
+            "value": "right_text"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],	
+    "blocks": [{
+    "type": "list",
+    "name": "List",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+      }
+    ]
+    }],
+    "presets": [{
+      "name": "Process 1",
+      "category": "Custom Sections"
+    }]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
