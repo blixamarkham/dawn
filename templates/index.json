@@ -75,6 +75,38 @@
         "full_width": false
       }
     },
+    "1633760547bbfebf28": {
+      "type": "rich-text",
+      "blocks": {
+        "1633760547bbfebf28-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Live Broadcasting",
+            "heading_size": "h1"
+          }
+        },
+        "1633760547bbfebf28-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We frequently hold live broadcasting sessions showing off awesome tutorials on how to do very high level technical stuff. If you are interested, click on one of the upcoming webinars and register to join the fun!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1633760547bbfebf28-0",
+        "1633760547bbfebf28-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true
+      }
+    },
+    "1633759461fa41044b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"bigmarker-channel-widget-containeraskblixa-llc\"><\/div><script src=\"https:\/\/www.bigmarker.com\/widget\/register_channel_widget.js?club=askblixa-llc&widget_type=automatically_list&upcoming_sub_title=&background_color=4c586e&btext_color=ffffff&link_color=1089f5&ltext_color=ffffff&show_public_webinar=false&widget_width=&widget_height=&enable_iframe=false&cid=052086a776cc\" type=\"text\/javascript\"><\/script>"
+      }
+    },
     "163036162544e3e0db": {
       "type": "multicolumn",
       "blocks": {
@@ -118,18 +150,13 @@
         "button_link": "https:\/\/askblixa.com\/account\/register",
         "swipe_on_mobile": true
       }
-    },
-    "1633759461fa41044b": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div id=\"bigmarker-channel-widget-containeraskblixa-llc\"><\/div><script src=\"https:\/\/www.bigmarker.com\/widget\/register_channel_widget.js?club=askblixa-llc&widget_type=automatically_list&upcoming_sub_title=&background_color=4c586e&btext_color=ffffff&link_color=1089f5&ltext_color=ffffff&show_public_webinar=false&widget_width=&widget_height=&enable_iframe=false&cid=052086a776cc\" type=\"text\/javascript\"><\/script>"
-      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "163036162544e3e0db",
-    "1633759461fa41044b"
+    "1633760547bbfebf28",
+    "1633759461fa41044b",
+    "163036162544e3e0db"
   ]
 }
