@@ -1,0 +1,554 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-grid-1" data-variant="{{section.settings.variant}}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% if section.settings.bg_image != blank %}
+  <div class="sh-overlay" style="background-image: url({{section.settings.bg_image | img_url : '2000x' }})"></div>
+  {% endif %}
+  {% unless section.settings.title == blank and section.settings.subtitle == blank %}
+  <div class="sh-header sh-container">
+    {% unless section.settings.title == blank %}
+    <h2 class="sh-title">{{ section.settings.title | escape }}</h2>
+    {% endunless %}
+    {% unless section.settings.subtitle == blank %}
+    <div class="sh-subtitle">{{ section.settings.subtitle | escape }}</div>
+    {% endunless %}
+  </div>
+  {% endunless %}
+
+  {% if section.settings.boxed %}
+  	<div class="sh-container">
+  {% endif %}
+  <div class="sh-grid" data-columns="{{section.settings.col_per_row}}" data-gap="{{section.settings.gap}}">
+    {% for block in section.blocks %}  
+    {% case block.type %}
+	{% when 'image_item' %}
+      <div class="sh-image-item">
+        <div class="sh-media">
+          <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}">
+        </div>
+      </div>
+	{% when 'text_item' %}
+      <div class="sh-text-item {% if block.settings.inverted %}sh-inverted{% endif %}">
+        <div class="sh-data">
+          <div class="sh-header">
+            <div class="sh-title">
+              {{block.settings.title}}
+            </div>
+          </div>
+          {% unless block.settings.content == blank %}
+          <div class="sh-content">
+            {{block.settings.content}}
+          </div>
+          {% endunless %}
+          <div class="sh-footer">
+            {% unless block.settings.link == blank %}
+            <a class="sh-button" href="{{block.settings.link}}">
+              <span class="sh-text">{{block.settings.button_string}}</span>
+              <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+            </a>
+            {% endunless %}
+          </div>    
+        </div>
+      </div>
+	{% when 'image_text_item' %}
+      <div class="sh-image-text-item {% if block.settings.inverted %}sh-inverted{% endif %}">
+        <div class="sh-media">
+          <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}">
+        </div>
+        <div class="sh-data">
+          <div class="sh-header">
+            <div class="sh-title">
+              {{block.settings.title}}
+            </div>
+          </div>
+          {% unless block.settings.content == blank %}
+          <div class="sh-content">
+            {{block.settings.content}}
+          </div>
+          {% endunless %}
+          <div class="sh-footer">
+            {% unless block.settings.link == blank %}
+            <a class="sh-button" href="{{block.settings.link}}">
+              <span class="sh-text">{{block.settings.button_string}}</span>
+              <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+            </a>
+            {% endunless %}
+          </div>    
+        </div>
+      </div>
+	{% when 'link_image_text_item' %}
+      <div class="sh-image-text-item sh-link-image-text-item {% if block.settings.inverted %}sh-inverted{% endif %}">
+        <a href="{{block.settings.link}}">
+          <div class="sh-media">
+            <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}">
+          </div>
+          <div class="sh-data">
+            <div class="sh-header">
+              <div class="sh-title">
+                {{block.settings.title}}
+              </div>
+            </div>
+            {% unless block.settings.content == blank %}
+            <div class="sh-content">
+              {{block.settings.content}}
+            </div>
+            {% endunless %}
+          </div>
+        </a>
+      </div>    
+    {% when 'image_box_item' %}
+      <div class="sh-image-box-item {% if block.settings.inverted %}sh-inverted{% endif %} {% if block.settings.horizontal %}sh-horizontal{% endif %} {% if block.settings.reversed %}sh-reversed{% endif %}" style="background-color: {{ block.settings.bg_color }};">
+        {% unless block.settings.link == blank %}
+        <a href="{{block.settings.link}}">
+        {% endunless %}
+          <div class="sh-media">
+            <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}">
+          </div>
+          <div class="sh-data">
+            <div class="sh-header">
+              <div class="sh-title">
+                {{block.settings.title}}
+              </div>
+            </div>
+            {% unless block.settings.content == blank %}
+            <div class="sh-content">
+              {{block.settings.content}}
+            </div>
+            {% endunless %}
+          </div>
+      {% unless block.settings.link == blank %}
+      </a>
+      {% endunless %}
+      </div>    
+    {% when 'image_text_button_item' %}
+      <div class="sh-image-text-button-item {% if block.settings.inverted %}sh-inverted{% endif %}">
+        <div class="sh-media">
+          <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}">
+        </div>
+        <div class="sh-data">
+          <div class="sh-header">
+            <div class="sh-title">
+              {{block.settings.title}}
+            </div>
+          </div>
+          {% unless block.settings.content == blank %}
+          <div class="sh-content">
+            {{block.settings.content}}
+          </div>
+          {% endunless %}
+          <div class="sh-footer">
+            {% unless block.settings.link == blank %}
+            <a class="sh-button" href="{{block.settings.link}}">{{block.settings.button_string}}</a>
+            {% endunless %}
+          </div>    
+        </div>
+      </div>
+    {% when 'image_video_text_item' %}    
+      <div class="sh-image-video-text-item">
+        <div class="sh-media">
+          <img class="sh-image" src="{{block.settings.image | img_url : section.settings.image_size}}" alt="video" >      
+          {% unless block.settings.video_url == blank %}
+          <a class="sh-magnific-popup" href="{{block.settings.video_url}}">
+            <span class="sh-icon">{% include 'sh-julia-icon' with '094' %}</span>
+          </a>
+          {% endunless %}
+        </div>
+        <div class="sh-data">
+          <div class="sh-header">
+            <div class="sh-title">
+              {{block.settings.title}}
+            </div>
+          </div>
+          {% unless block.settings.content == blank %}
+          <div class="sh-content">
+            {{block.settings.content}}
+          </div>
+          {% endunless %}
+        </div>
+      </div>
+	{% endcase %}    
+    {% endfor %}
+  </div>
+  {% if section.settings.boxed %}
+  	</div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Grid 1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Items grid"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+	  {
+        "type": "range",
+        "id": "col_per_row",
+        "label": "Col per row",
+        "default": 3,
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "type": "select",
+        "id": "gap",
+        "label": "Gap(px)",
+        "default": "0",
+        "options": [
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "10",
+            "value": "10"
+          },
+          {
+            "label": "15",
+            "value": "15"
+          },
+          {
+            "label": "20",
+            "value": "20"
+          },
+          {
+            "label": "25",
+            "value": "25"
+          },
+          {
+            "label": "30",
+            "value": "30"
+          }
+        ]
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Image size",
+         "default": "800x800_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "style_1",
+        "options": [
+          {
+            "label": "Style 1",
+            "value": "style_1"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "boxed",
+        "label": "Boxed",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)",
+		"default": "0"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)",
+		"default": "0"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],
+	"blocks": [
+      {
+        "type": "image_item",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "text_item",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "button_string",
+            "label": "Button text",
+            "default": "Get more info"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "checkbox",
+            "id": "inverted",
+            "label": "Inverted",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "image_text_item",
+        "name": "Image with text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "button_string",
+            "label": "Button text",
+            "default": "Get more info"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "checkbox",
+            "id": "inverted",
+            "label": "Inverted",
+            "default": false
+          }
+        ]
+      },
+	  {
+        "type": "image_text_button_item",
+        "name": "Image with text, button",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "button_string",
+            "label": "Button text",
+            "default": "Get more info"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "checkbox",
+            "id": "inverted",
+            "label": "Inverted",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "link_image_text_item",
+        "name": "Image with link and text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "inverted",
+            "label": "Inverted",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "image_box_item",
+        "name": "Image box",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color"
+          },
+          {
+            "type": "checkbox",
+            "id": "inverted",
+            "label": "Inverted",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "reversed",
+            "label": "Reversed",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "horizontal",
+            "label": "Horizontal",
+            "default": false
+          }
+        ]
+      },
+	  {
+        "type": "image_video_text_item",
+        "name": "Image with video and text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "id": "video_url",
+            "type": "video_url",
+            "label": "Video URL",
+            "accept": ["youtube", "vimeo"],
+            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          }
+        ]
+      }
+	],
+    "presets": [{
+      "name": "Grid 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
