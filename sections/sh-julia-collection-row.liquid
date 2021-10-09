@@ -1,0 +1,161 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-container sh-julia-collection-row {% if section.settings.reverse %}sh-reverse{% endif %}" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;" data-variant="{{section.settings.variant}}">  
+  <div class="sh-grid" data-columns="{{section.settings.col_per_row}}" data-gap="30">
+    {% if section.settings.selected_collection == blank or collections[section.settings.selected_collection] == empty %}
+      <div class="sh-header">
+        <h2 class="sh-title">
+          {{collections['all'].title}}
+        </h2>
+        {% unless collections['all'].description == blank %}
+        <div class="sh-subtitle">
+          {{collections['all'].description | strip_html | truncatewords: 20, '...'}}
+        </div>
+        {% endunless %}
+        <a class="sh-button" href="{{collections['all'].url}}">{{section.settings.button_string}}</a>
+      </div>
+      {% for product in collections['all'].products limit:section.settings.number_of_products %}
+    	<div class="sh-item">
+      	{% include 'sh-julia-product-card' %}
+    	</div>
+      {% endfor %}
+    {% else %}
+      <div class="sh-header">
+        <h2 class="sh-title">
+          {{collections[section.settings.selected_collection].title}}
+        </h2>
+        {% unless collections[section.settings.selected_collection].description == blank %}
+        <div class="sh-subtitle">
+          {{collections[section.settings.selected_collection].description | strip_html | truncatewords: 10, '...'}}
+        </div>
+        {% endunless %}
+        <a class="sh-button" href="{{collections[section.settings.selected_collection].url}}">{{section.settings.button_string}}</a>
+      </div>
+      {% for product in collections[section.settings.selected_collection].products limit:section.settings.number_of_products %}
+    	<div class="sh-item">
+    	{% include 'sh-julia-product-card' %}
+        </div>
+      {% endfor %}
+    {% endif %}    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Row",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "selected_collection",
+        "label": "Collection"
+      },
+      {
+         "type": "text",
+         "id": "button_string",
+         "label": "Button text",
+         "default": "Discover more"
+      },
+	  {
+        "type": "range",
+        "id": "number_of_products",
+        "label": "Number of products",
+        "default": 3,
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+	  {
+        "type": "range",
+        "id": "col_per_row",
+        "label": "Col per row",
+        "default": 4,
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Product size",
+         "default": "270x370_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider",
+        "label": "Images slider",
+        "default": true
+      },
+      {
+		"type": "header",
+		"content": "Strings"
+	  },
+      {
+         "type": "text",
+         "id": "sold_out_string",
+         "label": "Sold out string",
+         "default": "Sold out"
+      },
+      {
+         "type": "text",
+         "id": "sale_string",
+         "label": "Sale string",
+         "default": "Sale"
+      },
+      {
+         "type": "text",
+         "id": "new_string",
+         "label": "New string",
+         "default": "New"
+      },
+      {
+         "type": "text",
+         "id": "select_options_string",
+         "label": "Select options string",
+         "default": "Select options"
+      },
+      {
+         "type": "text",
+         "id": "add_cart_string",
+         "label": "Add cart string",
+         "default": "Add to cart"
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "style_1",
+        "options": [
+          {
+            "label": "Style 1",
+            "value": "style_1"
+          },
+          {
+            "label": "Style 2",
+            "value": "style_2"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "reverse",
+        "label": "Reverse",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      } 
+    ],
+    "presets": [{
+      "name": "Collection Row",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
