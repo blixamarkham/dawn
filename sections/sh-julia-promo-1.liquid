@@ -1,0 +1,161 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div style="display: none;">
+  <svg id="sh-icon-146" aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 24 24"><path fill="currentColor" d="M9.703 15.489l-2.5-2.5a.652.652 0 0 1-.176-.449c0-.169.059-.319.176-.449.13-.117.28-.176.449-.176s.319.059.449.176l2.051 2.07 5.801-5.82c.13-.117.28-.176.449-.176s.319.059.449.176c.117.13.176.28.176.449a.652.652 0 0 1-.176.449l-6.25 6.25a.877.877 0 0 1-.215.127.596.596 0 0 1-.468 0 .93.93 0 0 1-.215-.127z"/></svg>
+</div>
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-promo-1" data-variant="{{section.settings.variant}}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  <div class="sh-container">
+    {% unless section.settings.image == blank %}
+    <div class="sh-media">
+      <img class="sh-image lazyload" data-src="{{section.settings.image | img_url : section.settings.image_size}}" alt="{{section.settings.title}}" >
+    </div>
+    {% endunless %}
+    <div class="sh-data">
+      <div class="sh-header">
+        <h2 class="sh-title">
+          {{section.settings.title}}
+        </h2>
+        {% unless section.settings.subtitle == blank %}
+        <div class="sh-subtitle">
+          {{section.settings.subtitle}}
+        </div>
+        {% endunless %}
+      </div>
+      {% unless section.settings.content == blank %}
+      <div class="sh-content">
+        {{section.settings.content}}
+      </div>
+      {% endunless %}
+      <div class="sh-footer">
+        {% unless section.blocks.size == 0 %}
+        <div class="sh-items">
+          {% for block in section.blocks %}
+          <div class="sh-item">
+            <span class="sh-icon"><svg><use xlink:href="#sh-icon-146"></use></svg></span>
+            <span class="sh-text">
+              {{ block.settings.text }}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endunless %}
+        {% unless section.settings.link == blank %}
+        <a class="sh-button" href="{{section.settings.link}}">{{section.settings.button_string}}</a>
+        {% endunless %}
+      </div>    
+    </div>  
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Promo 1",
+    "settings": [	  	       
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Product promo"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Image size",
+         "default": "600x600_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "text",
+        "id": "button_string",
+        "label": "Button text",
+        "default": "Get more info"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "left_text",
+        "options": [
+          {
+            "label": "Left text",
+            "value": "left_text"
+          },
+          {
+            "label": "Right text",
+            "value": "right_text"
+          },
+          {
+            "label": "Left text inverted",
+            "value": "left_text_inverted"
+          },
+          {
+            "label": "Right text inverted",
+            "value": "right_text_inverted"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],	
+    "blocks": [{
+    "type": "list",
+    "name": "List",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Item text",
+        "default": "item text"
+      }
+    ]
+    }],
+    "presets": [{
+      "name": "Promo 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
