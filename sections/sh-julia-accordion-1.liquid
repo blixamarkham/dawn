@@ -1,0 +1,122 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-container sh-julia-accordion-1" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% assign half = section.blocks.size | divided_by: 2 %}
+  <div class="sh-columns">
+    <div class="sh-col-6">
+      <div class="sh-accordion">
+        {% for block in section.blocks %}  
+        {% case block.type %}
+        {% when 'text_item' %}        
+          {% if forloop.index <= half %}
+            <div class="sh-text-item">
+              <div class="sh-header">
+                <div class="sh-title">
+                  {{block.settings.title}}
+                </div>
+              </div>
+              <div class="sh-data">
+                <div class="sh-content">
+                  {{block.settings.content}}
+                </div>
+                <div class="sh-footer">
+                  {% unless block.settings.link == blank %}
+                  <a class="sh-button" href="{{block.settings.link}}">
+                    <span class="sh-text">{{block.settings.button_string}}</span>
+                    <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+                  </a>
+                  {% endunless %}
+                </div>    
+              </div>
+            </div>
+          {% endif %}
+        {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="sh-col-6">
+      <div class="sh-accordion">
+        {% for block in section.blocks %}  
+        {% case block.type %}
+        {% when 'text_item' %}        
+          {% if forloop.index > half %}
+            <div class="sh-text-item">
+              <div class="sh-header">
+                <div class="sh-title">
+                  {{block.settings.title}}
+                </div>
+              </div>
+              <div class="sh-data">
+                <div class="sh-content">
+                  {{block.settings.content}}
+                </div>
+                <div class="sh-footer">
+                  {% unless block.settings.link == blank %}
+                  <a class="sh-button" href="{{block.settings.link}}">
+                    <span class="sh-text">{{block.settings.button_string}}</span>
+                    <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+                  </a>
+                  {% endunless %}
+                </div>    
+              </div>
+            </div>
+          {% endif %}
+        {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>   
+
+</div>
+
+{% schema %}
+  {
+    "name": "Accordion 1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      } 
+    ],
+	"blocks": [
+      {
+        "type": "text_item",
+        "name": "Text item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "button_string",
+            "label": "Button text",
+            "default": "Get more info"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          }
+        ]
+      }
+	],
+    "presets": [{
+      "name": "Accordion 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
