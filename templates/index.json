@@ -75,6 +75,41 @@
         "full_width": false
       }
     },
+    "16337910559d9b4034": {
+      "type": "image-with-text",
+      "blocks": {
+        "16337910559d9b4034-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Live Broadcasting"
+          }
+        },
+        "16337910559d9b4034-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We frequently hold live broadcasting sessions showing off awesome tutorials on how to do very high level technical stuff. If you are interested, click on one of the upcoming webinars and register to join the fun!<\/p>"
+          }
+        },
+        "16337910559d9b4034-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Grab a Seat!",
+            "button_link": "shopify:\/\/pages\/my-story"
+          }
+        }
+      },
+      "block_order": [
+        "16337910559d9b4034-0",
+        "16337910559d9b4034-1",
+        "16337910559d9b4034-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/live_streaming.jpg",
+        "height": "adapt",
+        "color_scheme": "accent-1",
+        "layout": "image_first"
+      }
+    },
     "1633760547bbfebf28": {
       "type": "rich-text",
       "blocks": {
@@ -149,6 +184,7 @@
   "order": [
     "image_banner",
     "rich_text",
+    "16337910559d9b4034",
     "1633760547bbfebf28",
     "163036162544e3e0db"
   ]
