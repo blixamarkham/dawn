@@ -57,26 +57,25 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "Policies",
               "menu": "footer"
             }
           },
-          "d9e9f1e8-2bb1-4b77-a506-7423269cb39d": {
-            "type": "image",
+          "8efe9b96-c3c7-46b1-b1e0-d8283815859f": {
+            "type": "link_list",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Hero_Cover_5b586592-dfdf-4fb1-b731-c95ece1bbaaa.jpg",
-              "image_width": 200,
-              "alignment": "center"
+              "heading": "Quick Links",
+              "menu": "main-menu"
             }
           }
         },
         "block_order": [
           "cf04dc55-88c0-4a1c-8fa6-ae9c80759116",
           "footer-0",
-          "d9e9f1e8-2bb1-4b77-a506-7423269cb39d"
+          "8efe9b96-c3c7-46b1-b1e0-d8283815859f"
         ],
         "settings": {
-          "color_scheme": "accent-1",
+          "color_scheme": "inverse",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to my email list",
           "show_social": false,
