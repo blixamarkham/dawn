@@ -1,0 +1,142 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-text-2 {% if section.settings.inverted %}sh-inverted{% endif %}" data-variant="{{section.settings.variant}}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% if section.settings.bg_image != blank %}
+  <div class="sh-overlay" style="background-image: url({{section.settings.bg_image | img_url : '2000x' }})"></div>
+  {% endif %}
+  <div class="sh-container">
+    <div class="sh-header">
+      <h2 class="sh-title">
+        {{section.settings.title}}
+      </h2>
+      {% unless section.settings.subtitle == blank %}
+      <div class="sh-subtitle">
+        {{section.settings.subtitle}}
+      </div>
+      {% endunless %}
+    </div>
+    <div class="sh-data">
+      {% unless section.settings.content == blank %}
+      <div class="sh-content">
+        {{section.settings.content}}
+      </div>
+      {% endunless %}
+      {% unless section.blocks.size == 0 %}
+      <div class="sh-items">
+        {% for block in section.blocks %}
+        <div class="sh-item">
+          <div class="sh-title">
+            {{ block.settings.title }}
+          </div>
+          <div class="sh-text">
+            {{ block.settings.text }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endunless %}      
+    </div>  
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text 2",
+    "settings": [	  	       
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Call to action"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+		"default": "subheading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+		"default": "<p>content</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+      {
+      "type": "checkbox",
+      "id": "inverted",
+      "label": "Inverted",
+      "default": false
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "left_text",
+        "options": [
+          {
+            "label": "Left text",
+            "value": "left_text"
+          },
+          {
+            "label": "Right text",
+            "value": "right_text"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)",
+		"default": "50"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)",
+		"default": "50"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],	
+    "blocks": [{
+    "type": "list",
+    "name": "List",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Item title",
+        "default": "item title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Item text",
+        "default": "<p>item text</p>"
+      }
+    ]
+    }],
+    "presets": [{
+      "name": "Text 2",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
