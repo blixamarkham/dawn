@@ -1,0 +1,388 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-icon-list-2" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  <div class="sh-container">
+  <div class="sh-grid" data-columns="{{section.settings.col_per_row}}" data-gap="{{section.settings.gap}}">
+    {% for block in section.blocks %}  
+    {% case block.type %}
+	{% when 'list_item' %}
+      <div class="sh-icon-list-item">
+        {% unless block.settings.icon == blank %}
+        <div class="sh-media">
+          <span class="sh-icon">
+            {% include 'sh-julia-icon' with block.settings.icon %}
+          </span>            
+        </div>
+        {% endunless %}
+        <div class="sh-data">
+          {% unless block.settings.title == blank %}
+          <div class="sh-header">
+            <div class="sh-title">
+              {{block.settings.title}}
+            </div>
+          </div>
+          {% endunless %}
+          {% unless block.settings.content == blank %}
+          <div class="sh-content">
+            {{block.settings.content}}
+          </div>
+          {% endunless %}
+          <div class="sh-footer">
+            {% unless block.settings.link == blank %}
+            <a class="sh-button" href="{{block.settings.link}}">
+              <span class="sh-text">{{block.settings.button_string}}</span>
+              <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+            </a>
+            {% endunless %}
+          </div>    
+        </div>
+      </div>
+	{% endcase %}
+    {% endfor %}
+  </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Icon list 2",
+    "settings": [
+	  {
+        "type": "range",
+        "id": "col_per_row",
+        "label": "Col per row",
+        "default": 3,
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "type": "select",
+        "id": "gap",
+        "label": "Gap(px)",
+        "default": "10",
+        "options": [
+          {
+            "label": "0",
+            "value": "0"
+          },
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "3",
+            "value": "3"
+          },
+          {
+            "label": "4",
+            "value": "4"
+          },
+          {
+            "label": "5",
+            "value": "5"
+          },
+          {
+            "label": "10",
+            "value": "10"
+          },
+          {
+            "label": "15",
+            "value": "15"
+          },
+          {
+            "label": "20",
+            "value": "20"
+          },
+          {
+            "label": "25",
+            "value": "25"
+          },
+          {
+            "label": "30",
+            "value": "30"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],
+	"blocks": [
+      {
+        "type": "list_item",
+        "name": "List item",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+			"default": "001",
+            "options": [
+              {"label": "001", "value": "001"},
+              {"label": "002", "value": "002"},
+              {"label": "003", "value": "003"},
+              {"label": "004", "value": "004"},
+              {"label": "005", "value": "005"},
+              {"label": "006", "value": "006"},
+              {"label": "007", "value": "007"},
+              {"label": "008", "value": "008"},
+              {"label": "009", "value": "009"},
+              {"label": "010", "value": "010"},
+              {"label": "011", "value": "011"},
+              {"label": "012", "value": "012"},
+              {"label": "013", "value": "013"},
+              {"label": "014", "value": "014"},
+              {"label": "015", "value": "015"},
+              {"label": "016", "value": "016"},
+              {"label": "017", "value": "017"},
+              {"label": "018", "value": "018"},
+              {"label": "019", "value": "019"},
+              {"label": "020", "value": "020"},
+              {"label": "021", "value": "021"},
+              {"label": "022", "value": "022"},
+              {"label": "023", "value": "023"},
+              {"label": "024", "value": "024"},
+              {"label": "025", "value": "025"},
+              {"label": "026", "value": "026"},
+              {"label": "027", "value": "027"},
+              {"label": "028", "value": "028"},
+              {"label": "029", "value": "029"},
+              {"label": "030", "value": "030"},
+              {"label": "031", "value": "031"},
+              {"label": "032", "value": "032"},
+              {"label": "033", "value": "033"},
+              {"label": "034", "value": "034"},
+              {"label": "035", "value": "035"},
+              {"label": "036", "value": "036"},
+              {"label": "037", "value": "037"},
+              {"label": "038", "value": "038"},
+              {"label": "039", "value": "039"},
+              {"label": "040", "value": "040"},
+              {"label": "041", "value": "041"},
+              {"label": "042", "value": "042"},
+              {"label": "043", "value": "043"},
+              {"label": "044", "value": "044"},
+              {"label": "045", "value": "045"},
+              {"label": "046", "value": "046"},
+              {"label": "047", "value": "047"},
+              {"label": "048", "value": "048"},
+              {"label": "049", "value": "049"},
+              {"label": "050", "value": "050"},
+              {"label": "051", "value": "051"},
+              {"label": "052", "value": "052"},
+              {"label": "053", "value": "053"},
+              {"label": "054", "value": "054"},
+              {"label": "055", "value": "055"},
+              {"label": "056", "value": "056"},
+              {"label": "057", "value": "057"},
+              {"label": "058", "value": "058"},
+              {"label": "059", "value": "059"},
+              {"label": "060", "value": "060"},
+              {"label": "061", "value": "061"},
+              {"label": "062", "value": "062"},
+              {"label": "063", "value": "063"},
+              {"label": "064", "value": "064"},
+              {"label": "065", "value": "065"},
+              {"label": "066", "value": "066"},
+              {"label": "067", "value": "067"},
+              {"label": "068", "value": "068"},
+              {"label": "069", "value": "069"},
+              {"label": "070", "value": "070"},
+              {"label": "071", "value": "071"},
+              {"label": "072", "value": "072"},
+              {"label": "073", "value": "073"},
+              {"label": "074", "value": "074"},
+              {"label": "075", "value": "075"},
+              {"label": "076", "value": "076"},
+              {"label": "077", "value": "077"},
+              {"label": "078", "value": "078"},
+              {"label": "079", "value": "079"},
+              {"label": "080", "value": "080"},
+              {"label": "081", "value": "081"},
+              {"label": "082", "value": "082"},
+              {"label": "083", "value": "083"},
+              {"label": "084", "value": "084"},
+              {"label": "085", "value": "085"},
+              {"label": "086", "value": "086"},
+              {"label": "087", "value": "087"},
+              {"label": "088", "value": "088"},
+              {"label": "089", "value": "089"},
+              {"label": "090", "value": "090"},
+              {"label": "091", "value": "091"},
+              {"label": "092", "value": "092"},
+              {"label": "093", "value": "093"},
+              {"label": "094", "value": "094"},
+              {"label": "095", "value": "095"},
+              {"label": "096", "value": "096"},
+              {"label": "097", "value": "097"},
+              {"label": "098", "value": "098"},
+              {"label": "099", "value": "099"},
+              {"label": "100", "value": "100"},
+              {"label": "101", "value": "101"},
+              {"label": "102", "value": "102"},
+              {"label": "103", "value": "103"},
+              {"label": "104", "value": "104"},
+              {"label": "105", "value": "105"},
+              {"label": "106", "value": "106"},
+              {"label": "107", "value": "107"},
+              {"label": "108", "value": "108"},
+              {"label": "109", "value": "109"},
+              {"label": "110", "value": "110"},
+              {"label": "111", "value": "111"},
+              {"label": "112", "value": "112"},
+              {"label": "113", "value": "113"},
+              {"label": "114", "value": "114"},
+              {"label": "115", "value": "115"},
+              {"label": "116", "value": "116"},
+              {"label": "117", "value": "117"},
+              {"label": "118", "value": "118"},
+              {"label": "119", "value": "119"},
+              {"label": "120", "value": "120"},
+              {"label": "121", "value": "121"},
+              {"label": "122", "value": "122"},
+              {"label": "123", "value": "123"},
+              {"label": "124", "value": "124"},
+              {"label": "125", "value": "125"},
+              {"label": "126", "value": "126"},
+              {"label": "127", "value": "127"},
+              {"label": "128", "value": "128"},
+              {"label": "129", "value": "129"},
+              {"label": "130", "value": "130"},
+              {"label": "131", "value": "131"},
+              {"label": "132", "value": "132"},
+              {"label": "133", "value": "133"},
+              {"label": "134", "value": "134"},
+              {"label": "135", "value": "135"},
+              {"label": "136", "value": "136"},
+              {"label": "137", "value": "137"},
+              {"label": "138", "value": "138"},
+              {"label": "139", "value": "139"},
+              {"label": "140", "value": "140"},
+              {"label": "141", "value": "141"},
+              {"label": "142", "value": "142"},
+              {"label": "143", "value": "143"},
+              {"label": "144", "value": "144"},
+              {"label": "145", "value": "145"},
+              {"label": "146", "value": "146"},
+              {"label": "147", "value": "147"},
+              {"label": "148", "value": "148"},
+              {"label": "149", "value": "149"},
+              {"label": "150", "value": "150"},
+              {"label": "151", "value": "151"},
+              {"label": "152", "value": "152"},
+              {"label": "153", "value": "153"},
+              {"label": "154", "value": "154"},
+              {"label": "155", "value": "155"},
+              {"label": "156", "value": "156"},
+              {"label": "157", "value": "157"},
+              {"label": "158", "value": "158"},
+              {"label": "159", "value": "159"},
+              {"label": "160", "value": "160"},
+              {"label": "161", "value": "161"},
+              {"label": "162", "value": "162"},
+              {"label": "163", "value": "163"},
+              {"label": "164", "value": "164"},
+              {"label": "165", "value": "165"},
+              {"label": "166", "value": "166"},
+              {"label": "167", "value": "167"},
+              {"label": "168", "value": "168"},
+              {"label": "169", "value": "169"},
+              {"label": "170", "value": "170"},
+              {"label": "171", "value": "171"},
+              {"label": "172", "value": "172"},
+              {"label": "173", "value": "173"},
+              {"label": "174", "value": "174"},
+              {"label": "175", "value": "175"},
+              {"label": "176", "value": "176"},
+              {"label": "177", "value": "177"},
+              {"label": "178", "value": "178"},
+              {"label": "179", "value": "179"},
+              {"label": "180", "value": "180"},
+              {"label": "181", "value": "181"},
+              {"label": "182", "value": "182"},
+              {"label": "183", "value": "183"},
+              {"label": "184", "value": "184"},
+              {"label": "185", "value": "185"},
+              {"label": "186", "value": "186"},
+              {"label": "187", "value": "187"},
+              {"label": "188", "value": "188"},
+              {"label": "189", "value": "189"},
+              {"label": "190", "value": "190"},
+              {"label": "191", "value": "191"},
+              {"label": "192", "value": "192"},
+              {"label": "193", "value": "193"},
+              {"label": "194", "value": "194"},
+              {"label": "195", "value": "195"},
+              {"label": "196", "value": "196"},
+              {"label": "197", "value": "197"},
+              {"label": "198", "value": "198"},
+              {"label": "199", "value": "199"},
+              {"label": "200", "value": "200"},
+              {"label": "201", "value": "201"},
+              {"label": "202", "value": "202"},
+              {"label": "203", "value": "203"},
+              {"label": "204", "value": "204"},
+              {"label": "205", "value": "205"},
+              {"label": "206", "value": "206"},
+              {"label": "207", "value": "207"},
+              {"label": "208", "value": "208"},
+              {"label": "209", "value": "209"},
+              {"label": "210", "value": "210"},
+              {"label": "211", "value": "211"},
+              {"label": "212", "value": "212"},
+              {"label": "213", "value": "213"},
+              {"label": "214", "value": "214"},
+              {"label": "215", "value": "215"},
+              {"label": "216", "value": "216"},
+              {"label": "217", "value": "217"},
+              {"label": "218", "value": "218"},
+              {"label": "219", "value": "219"},
+              {"label": "220", "value": "220"},
+              {"label": "221", "value": "221"},
+              {"label": "222", "value": "222"},
+              {"label": "223", "value": "223"},
+              {"label": "224", "value": "224"},
+              {"label": "225", "value": "225"},
+              {"label": "226", "value": "226"},
+              {"label": "227", "value": "227"},
+              {"label": "228", "value": "228"},
+              {"label": "229", "value": "229"},
+              {"label": "230", "value": "230"},
+              {"label": "231", "value": "231"},
+              {"label": "232", "value": "232"},
+              {"label": "233", "value": "233"},
+              {"label": "234", "value": "234"},
+              {"label": "235", "value": "235"},
+              {"label": "301", "value": "301"},
+              {"label": "302", "value": "302"},
+              {"label": "303", "value": "303"},
+              {"label": "304", "value": "304"},
+              {"label": "305", "value": "305"}
+            ]
+          },		
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+	],
+    "presets": [{
+      "name": "Icon list 2",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
