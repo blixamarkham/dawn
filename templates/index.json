@@ -113,7 +113,7 @@
         "163036162544e3e0db-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/person-holds-their-glasses-in-front-of-them.jpg",
+            "image": "shopify:\/\/shop_images\/scientist-looking-through-microscope.jpg",
             "title": "Uncovering Data Sources",
             "text": "<p>If it's on the internet and public data, more than likely you can uncover the original data if you know where to look. Marketing data, sales data, it all starts here. <\/p>"
           }
@@ -141,11 +141,11 @@
         "163036162544e3e0db-2"
       ],
       "settings": {
-        "title": "What I Excel At (Pun Intended)",
+        "title": "Services",
         "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "secondary",
         "button_label": "Let's Talk",
         "button_link": "https:\/\/askblixa.com\/account\/register",
         "swipe_on_mobile": true
