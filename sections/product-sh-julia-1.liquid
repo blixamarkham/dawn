@@ -1,0 +1,351 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+
+{% if section.settings.selected_product != blank %}
+	{% assign current_product = all_products[section.settings.selected_product] %}
+{% else %}
+	{% assign current_product = product %}
+{% endif %}
+
+{% assign variant = current_product.selected_or_first_available_variant %}
+<script>
+    if (!('sh' in window)) {
+        window.sh = {};
+    }
+    window.sh.money_format = '{{shop.money_format}}';
+</script>
+<div id="sh-julia-{{ section.id }}" class="sh sh-container sh-julia-single-product sh-product" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">    
+  <div class="sh-product">
+    <div class="sh-media">   
+      {% if section.settings.slider %}
+      <div class="sh-swiper-container sh-swiper-thumbs" data-direction="vertical"  data-spaceBetween="5" data-slidesPerView="auto" data-mousewheel="true" data-pagination="false" data-navigation="false">
+        <div class="sh-swiper-wrapper">          
+          {% for media in current_product.media %}
+            {% case media.media_type %}
+              {% when 'image' %}
+                <div class="sh-swiper-slide">
+                  <img class="sh-image" src="{{media.preview_image | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+              {% when 'external_video' %}
+                <div class="sh-swiper-slide" data-media-id="{{ media.id }}">
+                  <img class="sh-image" src="{{media.preview_image | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+              {% when 'video' %}
+                <div class="sh-swiper-slide" data-media-id="{{ media.id }}">
+                  <img class="sh-image" src="{{media.preview_image | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+              {% when 'model' %}
+                <div class="sh-swiper-slide" data-media-id="{{ media.id }}">
+                  <img class="sh-image" src="{{media.preview_image | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+              {% else %}
+                <div class="sh-swiper-slide" data-media-id="{{ media.id }}">
+                  <img class="sh-image" src="{{media.preview_image | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+            {% endcase %}          
+          {% endfor %}          
+        </div>
+      </div>      
+      <div class="sh-product-swiper sh-swiper-container" data-loop="true" data-pagination="false">
+        <div class="sh-swiper-wrapper">          
+          {% for media in current_product.media %}
+            {% case media.media_type %}
+              {% when 'image' %}
+                <div class="sh-swiper-slide {% if section.settings.zoom %}sh-hover-zoom{% endif %}" data-zoom="{{media | img_url : '2000x'}}">
+                  <img class="sh-image lazyload" data-src="{{media | img_url : section.settings.image_size}}" data-image-id="{{media.id}}" alt="{{current_product.title}}" >
+                </div>
+              {% when 'external_video' %}
+                <div class="sh-swiper-slide" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+                  {{ media | external_video_tag }}
+                </div>
+              {% when 'video' %}
+                <div class="sh-swiper-slide" data-media-id="{{ media.id }}">
+                  {{ media | video_tag: controls: true }}
+                </div>
+              {% when 'model' %}
+                <div class="sh-swiper-slide" style="padding-top: 100%;" data-media-id="{{ media.id }}">
+                  {{ media | model_viewer_tag }}
+                </div>
+              {% else %}
+                <div class="sh-swiper-slide" style="padding-top: 100%;" data-media-id="{{ media.id }}">
+                  {{ media | media_tag }}
+                </div>
+            {% endcase %}          
+          {% endfor %}                    
+        </div>
+        <div class="sh-swiper-button-prev"></div>
+        <div class="sh-swiper-button-next"></div>
+      </div>      
+      {% else %}
+      <img class="sh-image lazyload" data-src="{{product.featured_image | img_url : section.settings.image_size}}" alt="{{product.title}}" >
+      {% endif %}      
+      {% if current_product.available %}
+        {% if current_product.compare_at_price > current_product.price %}
+	        <div class="sh-sale">
+              {{ section.settings.sale_string }}      
+              {{ current_product.compare_at_price | minus: current_product.price | times: 100 | divided_by: current_product.compare_at_price }}%
+            </div>
+        {% else %}
+          {% if current_product.tags contains 'new' %}
+              <div class="sh-new">
+                {{ section.settings.new_string }}      
+              </div>
+          {% endif %}
+      	{% endif %}
+      {% else %}
+        <div class="sh-sold-out">
+          {{ section.settings.sold_out_string }}
+        </div>
+      {% endif %}
+    </div>    
+    <div class="sh-data">
+      <div class="sh-header">
+        <h1 class="sh-title">
+          {{current_product.title}}
+        </h1>  
+        {% if section.settings.stars %}
+          <a href="#looxReviews" style="margin-bottom: 15px;">
+              <div class="loox-rating" data-id="{{ current_product.id }}" data-rating="{{ current_product.metafields.loox.avg_rating }}" data-raters="{{ current_product.metafields.loox.num_reviews }}"></div>
+          </a>
+        {% endif %}
+        <div class="sh-price-wrapper">
+          <span class="sh-price">
+            {% if variant.compare_at_price > variant.price %}
+            <span class="sh-price-compare">{{ variant.compare_at_price | money_without_trailing_zeros }}</span>
+            {% endif %}            
+            <span class="sh-price-varies">
+              {{ variant.price | money_without_trailing_zeros }}
+            </span>
+          </span>
+          {%- if variant.available and variant.unit_price_measurement -%}
+          <span class="sh-unit-price">
+            {{ variant.unit_price | money }}/{%- if variant.unit_price_measurement.reference_value != 1 -%} {{- variant.unit_price_measurement.reference_value -}} {%- endif -%} {{ variant.unit_price_measurement.reference_unit }}
+          </span>
+          {%- endif -%}
+        </div>
+        {{ form | payment_terms }}
+      </div>  
+      <div class="sh-footer">        
+        <div class="sh-product-options">
+          {% unless current_product.options.size == 1 and current_product.variants[0].title == 'Default Title' %}
+          {% if section.settings.variants_group == 'together' %}
+          <div class="sh-together">
+            <select class="" data-type="{{section.settings.variants_group}}" data-index="id">
+              {% for vrnt in current_product.variants %}                                
+              <option 
+                      {% if vrnt.id == variant.id %}
+                      selected
+                      {% endif %}
+                      value="{{vrnt.id}}" data-featured-image="{{vrnt.featured_image}}">
+                {{ vrnt.title }} - 
+                {% if vrnt.available %}
+                {{ vrnt.price | money_with_currency }}
+                {% else %}
+                {{section.settings.sold_out_string}}
+                {% endif %}
+              </option>                                
+              {% endfor %}
+            </select>
+          </div>
+          {% else %}
+          <div class="sh-separated">
+            {% for option in current_product.options_with_values %}
+            <div class="sh-option">                                
+              <label>{{option.name}}</label>
+              <select class="" data-index="option{{ forloop.index }}">
+                {% for value in option.values %}
+                <option value="{{ value | escape }}">{{value}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endfor %} 
+          </div>
+          {% endif %}
+          {% endunless %}
+        </div>
+        <div class="sh-buttons">
+          <div class="sh-quantity-wrapper">
+            <a class="sh-quantity-minus">
+              <span>
+                <span class="sh-quantity-icon-minus">
+                  <svg fill="currentColor" height="12px" viewBox="0 0 12 12"><path d="M11.5,7h-11C0.2,7,0,6.8,0,6.5v-1C0,5.2,0.2,5,0.5,5h11C11.8,5,12,5.2,12,5.5v1C12,6.8,11.8,7,11.5,7z"></path></svg>
+                </span>
+              </span>
+            </a>
+            <input type="text" name="quantity" value="1" min="1" class="sh-qty"/>
+            <a class="sh-quantity-plus">
+              <span>
+                <span class="sh-quantity-icon-plus">
+                  <svg fill="currentColor" height="12px" viewBox="0 0 12 12"><path d="M12,5.5v1C12,6.8,11.8,7,11.5,7H7v4.5C7,11.8,6.8,12,6.5,12h-1C5.2,12,5,11.8,5,11.5V7H0.5C0.2,7,0,6.8,0,6.5 v-1C0,5.2,0.2,5,0.5,5H5V0.5C5,0.2,5.2,0,5.5,0h1C6.8,0,7,0.2,7,0.5V5h4.5C11.8,5,12,5.2,12,5.5z" ></path></svg>
+                </span>
+              </span>
+            </a>
+          </div>
+          
+          <div class="sh-add-to-cart {% if section.settings.redirect %}sh-redirect-to-cart{% endif %} {% if current_product.available %}sh-available{% endif %}" data-product-id="{{ variant.id }}" data-quantity="1" data-add-to-cart="{{ section.settings.add_cart_string }}" data-sold-out="{{ section.settings.sold_out_string }}">{% if current_product.available %}{{ section.settings.add_cart_string }}{% else %}{{ section.settings.sold_out_string }}{% endif %}</div>
+          <div class="sh-add-to-wishlist" data-product-handle="{{ product.handle }}">      
+            <span class="sh-add">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16.243 5.843c.801 0 1.555.312 2.121.879a3.003 3.003 0 0 1 0 4.243l-2.121 2.121-2.121 2.121L12 17.328l-2.121-2.121-2.121-2.121-2.121-2.121a2.98 2.98 0 0 1-.879-2.121c0-.801.312-1.555.879-2.121a2.98 2.98 0 0 1 2.121-.879c.801 0 1.555.312 2.121.879l.707.707L12 8.843l1.414-1.414.707-.707a2.98 2.98 0 0 1 2.122-.879m0-2c-1.28 0-2.559.488-3.536 1.464L12 6.015l-.707-.707c-.976-.976-2.256-1.464-3.536-1.464s-2.559.487-3.535 1.464a5 5 0 0 0 0 7.071L6.343 14.5l2.121 2.121L12 20.157l3.536-3.536 2.121-2.121 2.121-2.121a5 5 0 0 0-3.535-8.536z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg>
+            </span>
+            <span class="sh-adding">
+            </span>
+            <span class="sh-added">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16.243 3.843c-1.28 0-2.559.488-3.536 1.464L12 6.015l-.707-.707c-.976-.976-2.256-1.464-3.536-1.464s-2.559.487-3.535 1.464a5 5 0 0 0 0 7.071L6.343 14.5l2.121 2.121L12 20.157l3.536-3.536 2.121-2.121 2.121-2.121a5 5 0 0 0-3.535-8.536z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg>
+            </span>
+          </div>  
+        </div>
+        {% form "product", current_product %} 	
+    	    <input name="id" type="hidden" value="{{variant.id}}" data-productid="{{current_product.id}}">  
+        	{% if section.settings.dynamic_checkout %}
+            	{{ form | payment_button }}
+        	{% endif %}        	
+        {% endform %}
+        <div class="sh-product-availability"
+          data-store-availability-container
+          data-product-title=""
+          data-has-only-default-variant=""
+          data-base-url=""
+        >
+        </div>    
+      </div>  
+      <div class="sh-content">
+        {% if section.settings.excerpt_words != 0 %}
+        	{{ current_product.description | strip_html | truncatewords: section.settings.excerpt_words, section.settings.excerpt_ellipsis }}
+        {% else %}
+        	{{ current_product.description }}
+        {% endif %}
+      </div>
+      {% if section.settings.social_sharing %}
+      	{% include 'sh-julia-social-sharing', share_title: current_product.title, share_permalink: current_product.url, share_image: current_product.featured_media %}
+      {% endif %}      
+    </div>
+        
+    <script type="application/json" class="sh-product-json">
+      {{ current_product | json }}
+    </script>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Single product 1",
+    "settings": [
+      {
+        "type": "product",
+        "id": "selected_product",
+        "label": "Product"
+      },
+      {
+         "type":      "radio",
+         "id":        "variants_group",
+         "label":     "Variants group",
+         "options": [
+           { "value": "together", "label": "Together" },
+           { "value": "separately", "label": "Separately" }
+         ],
+         "default":   "separately"
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Product size",
+         "default": "800x800_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider",
+        "label": "Images slider",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "zoom",
+        "label": "Images zoom",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "stars",
+        "label": "Star rating",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "redirect",
+        "label": "Redirect to cart page",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "dynamic_checkout",
+        "label": "Dynamic checkout buttons",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing",
+        "label": "Social sharing",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "excerpt_words",
+        "label": "Excerpt words number",
+		"info": "Set 0 if no need to truncate description",
+        "default": 0,
+        "min": 0,
+        "max": 500,
+        "step": 10
+      },
+      {
+        "type": "text",
+        "id": "excerpt_ellipsis",
+        "label": "Excerpt ellipsis",
+        "default": "..."
+      },
+      {
+		"type": "header",
+		"content": "Strings"
+	  },
+      {
+         "type": "text",
+         "id": "sold_out_string",
+         "label": "'Sold out' string",
+         "default": "Sold out"
+      },
+      {
+         "type": "text",
+         "id": "sale_string",
+         "label": "'Sale' string",
+         "default": "Sale"
+      },
+      {
+         "type": "text",
+         "id": "new_string",
+         "label": "'New' string",
+         "default": "New"
+      },
+      {
+         "type": "text",
+         "id": "add_cart_string",
+         "label": "'Add cart' string",
+         "default": "Add to cart"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],
+    "presets": [{
+      "name": "Single product 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
