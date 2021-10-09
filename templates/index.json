@@ -124,19 +124,12 @@
       "settings": {
         "custom_liquid": "<div id=\"bigmarker-channel-widget-containeraskblixa-llc\"><\/div><script src=\"https:\/\/www.bigmarker.com\/widget\/register_channel_widget.js?club=askblixa-llc&widget_type=automatically_list&upcoming_sub_title=&background_color=4c586e&btext_color=ffffff&link_color=1089f5&ltext_color=ffffff&show_public_webinar=false&widget_width=&widget_height=&enable_iframe=false&cid=052086a776cc\" type=\"text\/javascript\"><\/script>"
       }
-    },
-    "1633759934ca4c7e88": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": ""
-      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
     "163036162544e3e0db",
-    "1633759461fa41044b",
-    "1633759934ca4c7e88"
+    "1633759461fa41044b"
   ]
 }
