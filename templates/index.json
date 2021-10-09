@@ -148,7 +148,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "center",
-        "background_style": "secondary",
+        "background_style": "primary",
         "button_label": "Let's Talk",
         "button_link": "https:\/\/askblixa.com\/account\/register",
         "swipe_on_mobile": true
