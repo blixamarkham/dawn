@@ -94,7 +94,7 @@
           "type": "button",
           "settings": {
             "button_label": "Grab a Seat!",
-            "button_link": "shopify:\/\/pages\/my-story"
+            "button_link": "shopify:\/\/pages\/streaming"
           }
         }
       },
