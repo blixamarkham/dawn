@@ -1,0 +1,344 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-collections-5 {% if section.settings.inverted %}sh-inverted{% endif %}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;" data-variant="{{section.settings.variant}}">  
+  	<div class="sh-container">
+    {% if section.settings.display_type == 'all' %}
+      {% case section.settings.sort %}
+        {% when 'products_high' or 'products_low' %}
+          {%- assign list_collections = collections | sort: 'all_products_count' -%}
+        {% when 'date' or 'date_reversed' %}
+          {%- assign list_collections = collections | sort: 'published_at' -%}
+        {% else %}
+          {%- assign list_collections = collections -%}
+      {% endcase %}
+      {% for collection in list_collections limit:section.settings.number_of_collections %}
+    
+    
+    	{%- assign m = forloop.index | minus: 1 | modulo: 2 -%}    
+        {% if forloop.first == true %}
+          <div class="sh-row">
+  		{% else %}
+          {% if m == 0 %}
+            </div>
+            <div class="sh-row">
+          {% endif %}
+  		{% endif %}
+    
+    
+    	<div class="sh-collection">
+            <div class="sh-media">
+              <img class="sh-image lazyload" data-src="{{collection.image | img_url : section.settings.image_size}}" alt="{{collection.title}}" >
+            </div>
+            <div class="sh-data">
+              <div class="sh-header">
+                <h3 class="sh-title">
+                  {{collection.title}}
+                </h3>
+              </div>
+              {% unless collection.description == blank %}
+                <div class="sh-content">
+                  {{collection.description | strip_html | truncatewords: 20, '...'}}
+                </div>
+              {% endunless %}
+              <div class="sh-footer">
+				<a class="sh-button" href="{{collection.url}}">
+                  <span class="sh-text">{{section.settings.button_string}}</span>
+                  <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+                </a>                
+              </div>              
+            </div>
+        </div>
+              
+              
+        {% if forloop.last == true %}
+          </div>
+        {% endif %}
+    
+              
+      {% endfor %}
+    {% else %}
+      {% for block in section.blocks %}  
+        {% case block.type %}
+        {% when 'collection' %}     
+          {% if block.settings.collection == blank or collections[block.settings.collection] == empty %}
+              {% assign collection = collections['all'] %}
+          {% else %}
+              {% assign collection = collections[block.settings.collection] %}
+          {% endif %}        
+          {% if block.settings.title == blank %}
+              {% assign title = collection.title %}
+          {% else %}
+              {% assign title = block.settings.title %}
+          {% endif %}
+          {% if block.settings.image == blank %}
+              {% assign image = collection.image %}
+          {% else %}
+              {% assign image = block.settings.image %}
+          {% endif %}
+
+
+          {%- assign m = forloop.index | minus: 1 | modulo: 2 -%}    
+          {% if forloop.first == true %}
+            <div class="sh-row">
+          {% else %}
+            {% if m == 0 %}
+              </div>
+              <div class="sh-row">
+            {% endif %}
+          {% endif %}
+
+
+          <div class="sh-collection">
+              <div class="sh-media">
+                <img class="sh-image lazyload" data-src="{{image | img_url : section.settings.image_size}}" alt="{{title}}" >
+              </div>
+              <div class="sh-data">
+                <div class="sh-header">
+                  <h3 class="sh-title">
+                    {{title}}
+                  </h3>
+                </div>
+                {% unless collection.description == blank %}
+                  <div class="sh-content">
+                    {{collection.description | strip_html | truncatewords: 20, '...'}}
+                  </div>
+                {% endunless %}
+                <div class="sh-footer">
+                  <a class="sh-button" href="{{collection.url}}">
+                    <span class="sh-text">{{section.settings.button_string}}</span>
+                    <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+                  </a>                
+                </div>              
+              </div>
+          </div>
+
+
+          {% if forloop.last == true %}
+            </div>
+          {% endif %}
+    
+		{% when 'link' %}
+
+          {%- assign m = forloop.index | minus: 1 | modulo: 2 -%}    
+          {% if forloop.first == true %}
+            <div class="sh-row">
+          {% else %}
+            {% if m == 0 %}
+              </div>
+              <div class="sh-row">
+            {% endif %}
+          {% endif %}
+
+
+          <div class="sh-collection">
+              <div class="sh-media">
+                <img class="sh-image lazyload" data-src="{{block.settings.image | img_url : section.settings.image_size}}" alt="{{block.settings.title}}" >
+              </div>
+              <div class="sh-data">
+                <div class="sh-header">
+                  <h3 class="sh-title">
+                    {{block.settings.title}}
+                  </h3>
+                </div>
+                {% unless block.settings.content == blank %}
+                  <div class="sh-content">
+                    {{block.settings.content}}
+                  </div>
+                {% endunless %}
+                <div class="sh-footer">
+                  <a class="sh-button" href="{{block.settings.link}}">
+                    <span class="sh-text">{{section.settings.button_string}}</span>
+                    <span class="sh-icon">{% include 'sh-julia-icon' with '003' %}</span>
+                  </a>                
+                </div>              
+              </div>
+          </div>
+
+
+          {% if forloop.last == true %}
+            </div>
+          {% endif %}
+        {% endcase %}
+      
+    
+      {% endfor %}
+    {% endif %}      
+  	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collections 5",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "display_type",
+        "label": "Select collections to show",
+        "default": "all",
+        "options": [
+          {
+            "value": "all",
+            "label": "All"
+          },
+          {
+            "value": "selected",
+            "label": "Selected"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "sort",
+        "label": "Sort collections by:",
+        "info": "Sorting only applies when 'All' is selected",
+        "default": "alphabetical",
+        "options": [
+          {
+            "value": "products_high",
+            "label": "Product count, high to low"
+          },
+          {
+            "value": "products_low",
+            "label": "Product count, low to high"
+          },
+          {
+            "value": "alphabetical",
+            "label": "Alphabetically, A-Z"
+          },
+          {
+            "value": "alphabetical_reversed",
+            "label": "Alphabetically, Z-A"
+          },
+          {
+            "value": "date",
+            "label": "Date, old to new"
+          },
+          {
+            "value": "date_reversed",
+            "label": "Date, new to old"
+          }
+        ]
+      },
+	  {
+        "type": "range",
+        "id": "number_of_collections",
+        "label": "Number of collections",
+        "default": 2,
+        "min": 2,
+        "max": 12,
+        "step": 2
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Image size",
+         "default": "600x600_crop_center",
+         "info": "Set the image size: 'icon:32x32',\n 'small: 50x50',\n 'compact: 160x160',\n 'medium: 240x240',\n 'large: 480x480',\n 'grande: 600x600',\n 'master largest image: 2048x',\n'full' or '370x370_crop_center'"
+      },
+      {
+         "type": "text",
+         "id": "button_string",
+         "label": "Button text",
+         "default": "Discover more"
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "style_1",
+        "options": [
+          {
+            "label": "Style 1",
+            "value": "style_1"
+          },
+          {
+            "label": "Style 2",
+            "value": "style_2"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "inverted",
+        "label": "Inverted",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],
+	"blocks": [{
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title block (optional)",
+          "info": "Leave empty to use 'collection title' title."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Collection Image (optional)"
+        }
+	  ]
+    }, {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content (optional)"
+        }
+	  ]
+    }],
+    "presets": [{
+      "name": "Collections 5",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
