@@ -1,0 +1,37 @@
+{%- assign variant = product.selected_or_first_available_variant -%}
+<a href="{{product.url}}" class="sh-julia-product-mini-card">
+  <div class="sh-media">
+      <img class="sh-image lazyload" data-src="{{product.featured_image | img_url : section.settings.image_size}}" alt="{{product.title}}" >
+  </div>    
+  <div class="sh-data">
+    <div class="sh-header">
+      <div class="sh-extra">
+        <div class="sh-vendor">{{product.vendor}}</div>
+      </div>
+      <div class="sh-title">
+        {{product.title}}
+      </div>  
+      <div class="sh-price-wrapper">
+        <span class="sh-price">
+          {% if product.compare_at_price > product.price %}
+          <span class="sh-price-compare">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+          {% endif %}            
+          <span class="sh-price-varies">
+            {% if product.price_varies %}
+            	{{ product.price_min | money_without_trailing_zeros }}+
+            {% else %}
+            	{{ product.price | money_without_trailing_zeros }}
+            {% endif %}
+          </span>
+        </span>
+        {%- if variant.available and variant.unit_price_measurement -%}
+          <span class="sh-unit-price">
+            {{ variant.unit_price | money }}/{%- if variant.unit_price_measurement.reference_value != 1 -%} {{- variant.unit_price_measurement.reference_value -}} {%- endif -%} {{ variant.unit_price_measurement.reference_unit }}
+          </span>
+        {%- endif -%}
+      </div>
+    </div>  
+    <div class="sh-footer">
+    </div>  
+  </div>  
+</a>
