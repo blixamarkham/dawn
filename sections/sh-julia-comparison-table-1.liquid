@@ -1,0 +1,156 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-comparison-table-1 sh-comparison-table {% if section.settings.inverted %}sh-inverted{% endif %}" data-variant="{{section.settings.variant}}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% if section.settings.bg_image != blank %}
+  <div class="sh-overlay" style="background-image: url({{section.settings.bg_image | img_url : '2000x' }})"></div>
+  {% endif %}
+  <div class="sh-container">
+    <div class="sh-header">
+      <h2 class="sh-title">
+        {{section.settings.title}}
+      </h2>
+      {% unless section.settings.subtitle == blank %}
+      <div class="sh-subtitle">
+        {{section.settings.subtitle}}
+      </div>
+      {% endunless %}
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          {% for block in section.blocks %}
+            <th>
+              {% assign current_product = all_products[block.settings.selected_product] %}
+              <a href="{{current_product.url}}">
+                <div class="sh-data">
+                  <div class="sh-header">
+                    <div class="sh-title">
+                      {{current_product.title}}
+                    </div>
+                  </div>
+                </div>
+                <div class="sh-media">
+                  <img class="sh-image lazyload" data-src="{{current_product.featured_image | img_url : section.settings.image_size}}">
+                </div>
+              </a>              
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>  
+  </div>
+  {% unless section.blocks.size == 0 %}
+  <div class="sh-products">
+    {% for block in section.blocks %}
+      <div class="sh-product">
+        {% assign current_product = all_products[block.settings.selected_product] %}
+        <div class="sh-parameters">
+          {{ block.settings.parameters }}
+        </div>
+        <script type="application/json" class="sh-json">
+          {{ current_product | json }}
+        </script>
+      </div>
+    {% endfor %}
+  </div>
+  {% endunless %}      
+</div>
+
+{% schema %}
+  {
+    "name": "Comparison table 1",
+    "settings": [	  	       
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Comparison table"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+		"default": "subheading"
+      },
+      {
+      "type": "text",
+      "id": "image_size",
+      "label": "Product image size",
+	  "default": "200x200",
+      "info": "Set the image size: '400x400',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+      {
+      "type": "checkbox",
+      "id": "inverted",
+      "label": "Inverted",
+      "default": false
+      },
+	  {
+        "type": "select",
+        "id": "variant",
+        "label": "Variant",
+        "default": "style_1",
+        "options": [
+          {
+            "label": "Style 1",
+            "value": "style_1"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      }
+    ],	
+    "blocks": [{
+    "type": "list",
+    "name": "List",
+    "settings": [
+      {
+      "type": "product",
+      "id": "selected_product",
+      "label": "Product"
+      },
+      {
+        "type": "richtext",
+        "id": "parameters",
+        "label": "Parameters",
+        "default": "<p>Parameter 1: value</p><p>Parameter 2: value</p>"
+      }
+    ]
+    }],
+    "presets": [{
+      "name": "Comparison table 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
