@@ -122,9 +122,7 @@
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-      
-
-{{ 'sectionhub.scss.css' | asset_url | stylesheet_tag }}</head>
+      </head>
 
   <body>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -166,5 +164,5 @@
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
       }
     </script>
-  <script src="{{ 'sectionhub.js' | asset_url }}" defer></script></body>
+</body>
 </html>
