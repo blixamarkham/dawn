@@ -1,0 +1,168 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-container sh-julia-collection-tabs" style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% unless section.settings.title == blank and section.settings.subtitle == blank %}
+  <div class="sh-header">
+    {% unless section.settings.title == blank %}
+    <h2 class="sh-title">{{ section.settings.title | escape }}</h2>
+    {% endunless %}
+    {% unless section.settings.subtitle == blank %}
+    <div class="sh-subtitle">{{ section.settings.subtitle | escape }}</div>
+    {% endunless %}
+  </div>
+  {% endunless %}
+  
+  <div class="sh-tabs">
+    <div class="sh-titles">
+      {% for block in section.blocks %}  
+      	{% if block.settings.collection == blank or collections[block.settings.collection] == empty %}
+      		{% assign collection = collections['all'] %}
+      	{% else %}
+      		{% assign collection = collections[block.settings.collection] %}
+      	{% endif %}        
+      	{% if block.settings.title == blank %}
+      		<span data-target="#{{ collection.title | handleize }}">{{ collection.title }}</span>
+      	{% else %}
+      		<span data-target="#{{ block.settings.title | handleize }}">{{ block.settings.title }}</span>
+      	{% endif %}            
+      {% endfor %}
+    </div>
+    <div class="sh-content">
+      {% for block in section.blocks %}  
+      	{% if block.settings.collection == blank or collections[block.settings.collection] == empty %}
+      		{% assign collection = collections['all'] %}
+      	{% else %}
+      		{% assign collection = collections[block.settings.collection] %}
+      	{% endif %}        
+      	{% if block.settings.title == blank %}
+      		{% assign tab_id = collection.title | handleize %}
+      	{% else %}
+      		{% assign tab_id = block.settings.title | handleize %}
+      	{% endif %}
+        <div class="sh-item" id="{{ tab_id }}">
+          <div class="sh-grid" data-columns="{{section.settings.col_per_row}}" data-gap="30">
+            {% for product in collection.products limit:section.settings.number_of_products %}
+            	{% include 'sh-julia-product-card' %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured products"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+	  {
+        "type": "range",
+        "id": "number_of_products",
+        "label": "Number of products",
+        "default": 10,
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+	  {
+        "type": "range",
+        "id": "col_per_row",
+        "label": "Col per row",
+        "default": 4,
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+         "type": "text",
+         "id": "image_size",
+         "label": "Product size",
+         "default": "270x370_crop_center",
+         "info": "Set the image size: '600x600',\n '2048x',\n'original' or '370x370_crop_center'"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider",
+        "label": "Images slider",
+        "default": true
+      },
+      {
+		"type": "header",
+		"content": "Strings"
+	  },
+      {
+         "type": "text",
+         "id": "sold_out_string",
+         "label": "Sold out string",
+         "default": "Sold out"
+      },
+      {
+         "type": "text",
+         "id": "sale_string",
+         "label": "Sale string",
+         "default": "Sale"
+      },
+      {
+         "type": "text",
+         "id": "new_string",
+         "label": "New string",
+         "default": "New"
+      },
+      {
+         "type": "text",
+         "id": "select_options_string",
+         "label": "Select options string",
+         "default": "Select options"
+      },
+      {
+         "type": "text",
+         "id": "add_cart_string",
+         "label": "Add cart string",
+         "default": "Add to cart"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      } 
+    ],
+	"blocks": [{
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title block (optional)",
+          "info": "Leave empty to use 'collection title' title."
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        }
+	  ]
+    }],
+    "presets": [{
+      "name": "Collection Tabs",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}

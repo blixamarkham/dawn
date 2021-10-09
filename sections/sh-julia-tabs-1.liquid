@@ -1,0 +1,112 @@
+{{"sectionhub-julia.scss.css" | asset_url | stylesheet_tag }}
+
+<div id="sh-julia-{{ section.id }}" class="sh sh-julia-tabs {% if section.settings.inverted %}sh-inverted{% endif %}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">  
+  {% if section.settings.bg_image != blank %}
+  <div class="sh-overlay" style="background-image: url({{section.settings.bg_image | img_url : '2000x' }})"></div>
+  {% endif %}
+  <div class="sh-container">
+    {% unless section.settings.title == blank and section.settings.subtitle == blank %}
+    <div class="sh-header">
+      {% unless section.settings.title == blank %}
+      <h2 class="sh-title">{{ section.settings.title | escape }}</h2>
+      {% endunless %}
+      {% unless section.settings.subtitle == blank %}
+      <div class="sh-subtitle">{{ section.settings.subtitle | escape }}</div>
+      {% endunless %}
+    </div>
+    {% endunless %}
+
+    <div class="sh-tabs">
+      <div class="sh-titles">
+        {% for block in section.blocks %}  
+              <span data-target="#{{ block.settings.title | handleize }}">{{ block.settings.title }}</span>
+        {% endfor %}
+      </div>
+      <div class="sh-content">
+        {% for block in section.blocks %}  
+          <div class="sh-item" id="{{ block.settings.title | handleize }}">
+            <div class="sh-content">
+              {{ block.settings.content }}
+            </div>            
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Tabs 1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Tabs"
+      },
+	  {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      },
+      {
+      "type": "checkbox",
+      "id": "inverted",
+      "label": "Inverted",
+      "default": false
+      },
+      {
+        "type": "text",
+        "id": "padding_top",
+        "label": "Padding top (px)"
+      },
+      {
+        "type": "text",
+        "id": "padding_bottom",
+        "label": "Padding bottom (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_top",
+        "label": "Margin top (px)"
+      },
+      {
+        "type": "text",
+        "id": "margin_bottom",
+        "label": "Margin bottom (px)"
+      } 
+    ],
+	"blocks": [{
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+	  ]
+    }],
+    "presets": [{
+      "name": "Tabs 1",
+      "category": "SectionHub: Julia"
+    }]
+  }
+{% endschema %}
