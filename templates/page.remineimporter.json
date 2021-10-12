@@ -35,13 +35,21 @@
             "Question": "What happens when a Remine contact with too many emails or phone numbers is imported into Wise Agent?",
             "answer": "Wise Agent will import as many email addresses as it can into the email field. For email addresses that go over Wise Agent's limit, the rest will be found in the Notes section where you can also find the Sell Score and Equity Percentage fields."
           }
+        },
+        "6d6abc8a-a1d4-49bd-af9e-0198d0d32244": {
+          "type": "text",
+          "settings": {
+            "Question": "When I tried to upload the file, the import failed! What happened?",
+            "answer": "The number 1 reason why this may have happened is because when you went to export your prospects from Remine you did not select the toggle for \"All Column Fields.\" Please make sure that you select the toggle, export a new file, and try using the Importer again."
+          }
         }
       },
       "block_order": [
         "163408091829b72961-0",
         "163408091829b72961-1",
         "6b114f4d-2bfc-41b1-a5db-ff528c467c1a",
-        "9815c5f4-8665-4009-9f01-86e940db4f24"
+        "9815c5f4-8665-4009-9f01-86e940db4f24",
+        "6d6abc8a-a1d4-49bd-af9e-0198d0d32244"
       ],
       "settings": {
         "color_scheme": "background-1",
