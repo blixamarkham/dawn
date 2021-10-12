@@ -4,9 +4,53 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "163408091829b72961": {
+      "type": "main-page-faq",
+      "blocks": {
+        "163408091829b72961-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "163408091829b72961-1": {
+          "type": "text",
+          "settings": {
+            "Question": "What happens if a Remine contact is imported into Wise Agent and has no name, email, or phone number?",
+            "answer": "In the event that a lead from Remine does not contain a name, email, or phone number (or any type of combination) the lead will still be imported anyways. For these types of leads, a direct mail campaign is the perfect solution. Wise Agent has this feature integrated already with your account."
+          }
+        },
+        "6b114f4d-2bfc-41b1-a5db-ff528c467c1a": {
+          "type": "text",
+          "settings": {
+            "Question": "What happens if a Remine contact has DNC marked next to their phone number?",
+            "answer": "DNC phone numbers will be found in the Extra Details field for both Owner 1 and Owner 2. This is to remain compliant with GDPR and FTC rules about spam and cold calling. You are still given the phone numbers so that you can make your own decision whether you want to contact them or not."
+          }
+        },
+        "9815c5f4-8665-4009-9f01-86e940db4f24": {
+          "type": "text",
+          "settings": {
+            "Question": "What happens when a Remine contact with too many emails or phone numbers is imported into Wise Agent?",
+            "answer": "Wise Agent will import as many email addresses as it can into the email field. For email addresses that go over Wise Agent's limit, the rest will be found in the Notes section where you can also find the Sell Score and Equity Percentage fields."
+          }
+        }
+      },
+      "block_order": [
+        "163408091829b72961-0",
+        "163408091829b72961-1",
+        "6b114f4d-2bfc-41b1-a5db-ff528c467c1a",
+        "9815c5f4-8665-4009-9f01-86e940db4f24"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "163408091829b72961"
   ]
 }
