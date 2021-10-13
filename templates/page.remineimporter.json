@@ -3,7 +3,7 @@
     "1634082747f877ba64": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<ul id=\"remine-menu\">\n{% for link in linklists.remine-menu.links %}\n  <li><a href=\"{{ link.url }}\">{{ link.title }}<\/a><\/li>\n{% endfor %}\n<\/ul>"
+        "custom_liquid": "<ul class=\"menu\">\n  {% for link in linklists.remine-menu.links %}\n    <li class=\"menu-link\">\n      <a href=\"{{ link.url }}\">{{ link.title }}<\/a>\n\n      {% if link.links.size > 0 %}\n        <ul class=\"menu dropdown-child\">\n          {% for child_link in link.links %}\n            <li class=\"menu-link\">\n              <a href=\"{{ child_link.url }}\">{{ child_link.title }}<\/a>\n\n              {% if child_link.links.size > 0 %}\n                <ul class=\"menu dropdown-grandchild\">\n                  {% for grandchild_link in child_link.links %}\n                    <li class=\"menu-link\">\n                      <a href=\"{{ grandchild_link.url }}\">{{ grandchild_link.title }}<\/a>\n                    <\/li>\n                  {% endfor %}\n                <\/ul>\n              {% endif %}\n            <\/li>\n          {% endfor %}\n        <\/ul>\n      {% endif %}\n    <\/li>\n  {% endfor %}\n<\/ul>"
       }
     },
     "main": {
