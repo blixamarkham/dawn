@@ -13,6 +13,7 @@
     },
     "163408091829b72961": {
       "type": "main-page-faq",
+      "disabled": true,
       "blocks": {
         "163408091829b72961-0": {
           "type": "heading",
