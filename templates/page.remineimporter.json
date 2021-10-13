@@ -46,7 +46,7 @@
           "type": "text",
           "settings": {
             "Question": "When I tried to upload the file, the import failed! What happened?",
-            "answer": "The number 1 reason why this may have happened is because when you went to export your prospects from Remine you did not select the toggle for \"All Column Fields.\" Please make sure that you select the toggle, export a new file, and try using the Importer again."
+            "answer": "The most common reason why this could happen is due to exporting the prospect list from Remine without selecting the toggle switch for \"All Column Fields.\" Please make sure that you select the toggle, export a new file, and then try again."
           }
         }
       },
