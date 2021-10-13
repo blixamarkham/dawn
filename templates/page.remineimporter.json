@@ -1,5 +1,11 @@
 {
   "sections": {
+    "1634082747f877ba64": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<ul id=\"remine-menu\">\n{% for link in linklists.remine-menu.links %}\n  <li><a href=\"{{ link.url }}\">{{ link.title }}<\/a><\/li>\n{% endfor %}\n<\/ul>"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -58,6 +64,7 @@
     }
   },
   "order": [
+    "1634082747f877ba64",
     "main",
     "163408091829b72961"
   ]
