@@ -4,9 +4,63 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "163417850170b12d4f": {
+      "type": "custom-our-process",
+      "blocks": {
+        "28b0bcbd-06b2-4c9e-b928-9ae981b79c8c": {
+          "type": "list",
+          "settings": {
+            "title": "Title",
+            "content": "<p>gfdddddddddddddddddddasdgfsdfgdssdafdsfsdfdfdfsfddsf<\/p><p>adsfdsfsd<\/p><p>asdfsdf<\/p><p>sdaf<\/p>"
+          }
+        },
+        "9d3bc870-4a40-4042-a98c-612be4586c77": {
+          "type": "list",
+          "settings": {
+            "title": "Title",
+            "content": "<p>asdfsdsdfdsfadsds<\/p>"
+          }
+        },
+        "2e4feea5-d6a2-4f08-aca8-bb98915f96a2": {
+          "type": "list",
+          "settings": {
+            "title": "Title",
+            "content": "<p>asfsadfdsffdsffds<\/p>"
+          }
+        },
+        "7430c893-cc9c-4193-9883-4e747b084c34": {
+          "type": "list",
+          "settings": {
+            "title": "Title",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "28b0bcbd-06b2-4c9e-b928-9ae981b79c8c",
+        "9d3bc870-4a40-4042-a98c-612be4586c77",
+        "2e4feea5-d6a2-4f08-aca8-bb98915f96a2",
+        "7430c893-cc9c-4193-9883-4e747b084c34"
+      ],
+      "settings": {
+        "title": "Our process",
+        "image": "shopify:\/\/shop_images\/scientist-looking-through-microscope.jpg",
+        "image_size": "600x600_crop_center",
+        "button_string": "Get more info",
+        "link": "",
+        "bg_color": "#1878b9",
+        "inverted": false,
+        "variant": "left_text",
+        "padding_top": "",
+        "padding_bottom": "",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "163417850170b12d4f"
   ]
 }
