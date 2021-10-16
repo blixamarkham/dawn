@@ -97,7 +97,7 @@
         "16335614292161e55b-1": {
           "type": "text",
           "settings": {
-            "text": "<p>I have learned a lot over the years, but the skills I am most proud of that I really stand out from everyone I know are:<br\/>• Extracting data from anywhere on the internet using custom scripts, programming, and API's<\/p><p>• Reverse engineering the competition for clients and creating an implementable plan to assimilate what I found (you may know this as funnel hacking)<\/p><p>• Identifying very quickly which marketing companies deliver real value vs. fake value<\/p><p>• Helping businesses take all of their data, organize it, and develop dashboards that reveal KPI's they can monitor to make informed business decisions<\/p><p>• Finding security loopholes that companies have and offering a detailed plan on how they can fix it<\/p><p>Life is a never-ending exercise of self-development and personal discovery. Getting through life alone, however, is impossible. I have had many supporters that have helped me get where I am today. I am thankful for my wife, son, and daughter. They give me purpose and meaning every single day. But, most of all, I give thanks to God almighty.<\/p>"
+            "text": "<p>I have learned a lot over the years, but the skills I am most proud of that I really stand out from everyone I know are:<br\/>• Extracting data from anywhere on the internet using custom scripts, programming, and API's<\/p><p>• Reverse engineering the competition for clients and creating an implementable plan to assimilate what I found (you may know this as funnel hacking)<\/p><p>• Identifying very quickly which marketing companies deliver real value vs. fake value<\/p><p>• Helping businesses take all of their data, organize it, and develop dashboards that reveal KPI's they can monitor to make informed business decisions<\/p><p>• Finding security loopholes that companies have and offering a detailed plan on how they can fix it<\/p>"
           }
         }
       },
@@ -111,6 +111,33 @@
         "color_scheme": "background-1",
         "layout": "image_first"
       }
+    },
+    "163435463472f02ffd": {
+      "type": "image-with-text",
+      "blocks": {
+        "163435463472f02ffd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "On a personal note"
+          }
+        },
+        "163435463472f02ffd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life is a never-ending exercise of self-development and personal discovery. Getting through life alone, however, is impossible. I struggle like everyone else. However, without my family supporting me, I would have never made it this far. My struggles make me stronger; they show me how far I can go if I push myself to the limit. I give thanks to my family. They give me purpose, meaning, and remind me that every day is a fresh beginning. And most importantly they have taught me that the only thing that separates us from our goals is always believing that we can achieve them.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163435463472f02ffd-0",
+        "163435463472f02ffd-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hikers-walking-across-mountain-trail.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first"
+      }
     }
   },
   "order": [
@@ -118,6 +145,7 @@
     "1633561029683dd663",
     "1633561187ab7c67e6",
     "1633561425a4f90f98",
-    "16335614292161e55b"
+    "16335614292161e55b",
+    "163435463472f02ffd"
   ]
 }
