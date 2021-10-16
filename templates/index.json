@@ -169,21 +169,24 @@
           "settings": {
             "text": "<p><br\/>AskBlixa is a company that provides technology solutions for other companies. We help our clients by providing them with the resources they need to make informed decisions about their technology and solve their challenges. Our life's mission is to find out your pain points with technology and solve them. There's no such thing as a dumb question. If you have one, please fill out the form below and contact us. We will be waiting to hear from you.<\/p>"
           }
+        },
+        "1e679e4d-6705-46ad-938b-b03f12479aea": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "163434376029d74836-0",
-        "163434376029d74836-1"
+        "163434376029d74836-1",
+        "1e679e4d-6705-46ad-938b-b03f12479aea"
       ],
       "settings": {
         "color_scheme": "background-1",
         "full_width": true
-      }
-    },
-    "1634343762af424ae4": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Contact Us"
       }
     }
   },
@@ -192,7 +195,6 @@
     "rich_text",
     "16337910559d9b4034",
     "163036162544e3e0db",
-    "163434376029d74836",
-    "1634343762af424ae4"
+    "163434376029d74836"
   ]
 }
