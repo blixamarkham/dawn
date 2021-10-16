@@ -149,9 +149,41 @@
         "image_ratio": "adapt",
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "Let's Talk",
-        "button_link": "https:\/\/askblixa.com\/account\/register",
+        "button_label": "",
+        "button_link": "",
         "swipe_on_mobile": true
+      }
+    },
+    "163434376029d74836": {
+      "type": "rich-text",
+      "blocks": {
+        "163434376029d74836-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have a Question?",
+            "heading_size": "h1"
+          }
+        },
+        "163434376029d74836-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br\/>AskBlixa is a company that provides technology solutions for other companies. We help our clients by providing them with the resources they need to make informed decisions about their technology and solve their challenges. Our life's mission is to find out your pain points with technology and solve them. There's no such thing as a dumb question. If you have one, please fill out the form below and contact us. We will be waiting to hear from you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163434376029d74836-0",
+        "163434376029d74836-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "1634343762af424ae4": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact Us"
       }
     }
   },
@@ -159,6 +191,8 @@
     "image_banner",
     "rich_text",
     "16337910559d9b4034",
-    "163036162544e3e0db"
+    "163036162544e3e0db",
+    "163434376029d74836",
+    "1634343762af424ae4"
   ]
 }
