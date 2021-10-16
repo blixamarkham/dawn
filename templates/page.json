@@ -5,62 +5,42 @@
       "settings": {
       }
     },
-    "163417850170b12d4f": {
-      "type": "custom-our-process",
+    "1634343668f2439026": {
+      "type": "rich-text",
       "blocks": {
-        "28b0bcbd-06b2-4c9e-b928-9ae981b79c8c": {
-          "type": "list",
+        "1634343668f2439026-0": {
+          "type": "heading",
           "settings": {
-            "title": "Title",
-            "content": "<p>gfdddddddddddddddddddasdgfsdfgdssdafdsfsdfdfdfsfddsf<\/p><p>adsfdsfsd<\/p><p>asdfsdf<\/p><p>sdaf<\/p>"
+            "heading": "Have a Question?",
+            "heading_size": "h1"
           }
         },
-        "9d3bc870-4a40-4042-a98c-612be4586c77": {
-          "type": "list",
+        "1634343668f2439026-1": {
+          "type": "text",
           "settings": {
-            "title": "Title",
-            "content": "<p>asdfsdsdfdsfadsds<\/p>"
-          }
-        },
-        "2e4feea5-d6a2-4f08-aca8-bb98915f96a2": {
-          "type": "list",
-          "settings": {
-            "title": "Title",
-            "content": "<p>asfsadfdsffdsffds<\/p>"
-          }
-        },
-        "7430c893-cc9c-4193-9883-4e747b084c34": {
-          "type": "list",
-          "settings": {
-            "title": "Title",
-            "content": ""
+            "text": "<p><br\/>AskBlixa is a company that provides technology solutions for other companies. We help our clients by providing them with the resources they need to make informed decisions about their technology and solve their challenges. Our life's mission is to find out your pain points with technology and solve them. There's no such thing as a dumb question. If you have one, please fill out the form below and contact us. We will be waiting to hear from you.<br\/><br\/><\/p>"
           }
         }
       },
       "block_order": [
-        "28b0bcbd-06b2-4c9e-b928-9ae981b79c8c",
-        "9d3bc870-4a40-4042-a98c-612be4586c77",
-        "2e4feea5-d6a2-4f08-aca8-bb98915f96a2",
-        "7430c893-cc9c-4193-9883-4e747b084c34"
+        "1634343668f2439026-0",
+        "1634343668f2439026-1"
       ],
       "settings": {
-        "title": "Our process",
-        "image": "shopify:\/\/shop_images\/scientist-looking-through-microscope.jpg",
-        "image_size": "600x600_crop_center",
-        "button_string": "Get more info",
-        "link": "",
-        "bg_color": "#1878b9",
-        "inverted": false,
-        "variant": "left_text",
-        "padding_top": "",
-        "padding_bottom": "",
-        "margin_top": "",
-        "margin_bottom": ""
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "1634343608cb1f6746": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact form"
       }
     }
   },
   "order": [
     "main",
-    "163417850170b12d4f"
+    "1634343668f2439026",
+    "1634343608cb1f6746"
   ]
 }
