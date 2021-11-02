@@ -21,3 +21,12 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+
+/*zoho chat */
+
+.zsiq_flt_rel1 {
+  position: fixed !important;
+  right: 0px !important;
+  bottom: 0px !important;
+}
