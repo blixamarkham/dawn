@@ -2201,3 +2201,12 @@ details-disclosure > details {
   .easycsv_import_info {
     	display: none !important;
   }
+  
+  
+/*zoho chat */
+
+.zsiq_flt_rel1 {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
