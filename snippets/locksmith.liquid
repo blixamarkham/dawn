@@ -3,8 +3,8 @@
   fiddle with what's below, but your changes will be reset the next time that
   Locksmith interacts with your shop.
 
-  Last updated: Thu, 14 Oct 2021 02:00:10 +0000
-  Integration version: v6.26
+  Last updated: Mon, 06 Dec 2021 03:20:17 +0000
+  Integration version: v6.27
 {% endcomment -%}
 
 {%include 'locksmith-variables', locksmith_scope: nil%}{%if locksmith_access_denied_content == blank%}{%capture locksmith_access_denied_content%}{%if locksmith_manual_lock%}{{content_for_layout}}{%elsif locksmith_server_lock%}<div id="locksmith-content">
@@ -96,4 +96,4 @@
     } else {
       window.addEventListener('load', load);
     }
-  </script>{%endcapture%}{%unless request.design_mode or request.host contains ".shopifypreview.com"%}{%assign content_for_layout=content_for_layout|append:_3%}{%endunless%}{%if locksmith_access_denied and content_for_layout contains '<input type="hidden" name="form_type" value="customer_login" />'%}{%assign locksmith_original_template=template%}{%assign template='customers/login'%}{%endif%}
+  </script>{%endcapture%}{%unless request.design_mode or request.host contains ".shopifypreview.com" or request.page_type == "password"%}{%assign content_for_layout=content_for_layout|append:_3%}{%endunless%}{%if locksmith_access_denied and content_for_layout contains '<input type="hidden" name="form_type" value="customer_login" />'%}{%assign locksmith_original_template=template%}{%assign template='customers/login'%}{%endif%}
